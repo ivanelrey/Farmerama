@@ -11,7 +11,7 @@
     <body>
         <div id="header">FARMERAMA</div>
         <div id="logIn">
-            <a href="logIn.jsp" >Log In</a><br/><br/>
+            <a href="homePage.jsp" >Log In</a><br/><br/>
             <a href="signUp.jsp" >Create Account</a><br/><br/>
             <a href="contact.jsp" >Contact</a>
         </div>
