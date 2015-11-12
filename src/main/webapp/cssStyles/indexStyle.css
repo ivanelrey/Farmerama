@@ -7,9 +7,11 @@ and open the template in the editor.
     Created on : 11 Νοε 2015, 7:23:16 μμ
     Author     : Gomesito
 */
-body{
-    background-image: url("images/mainBackground.jpg");
+body {
+    background-image: url("../images/mainBackground.jpg");
+    background-color: #cccccc;
     background-size: cover;
+    text-align: center;
 }
 #header {
     background-color:transparent;
@@ -18,7 +20,7 @@ body{
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     padding:10px;
     font-size: 35px;
-    animation-direction: alternate;
+   // animation-direction: alternate;
 }
 #logIn{
     line-height:30px;
