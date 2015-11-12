@@ -8,11 +8,11 @@
         <link rel="stylesheet" type="text/css" href="cssStyles/indexStyle.css">
         <title>FARMERAMA</title>
     </head>
-    <body>
+    <body >
         <div id="header">FARMERAMA</div>
         <div id="logIn">
-            <a href="homePage.jsp" >Log In</a><br/><br/>
-            <a href="signUp.jsp" >Create Account</a><br/><br/>
+            <a href="login.jsp" >Log In</a><br><br>
+            <a href="signUp.jsp" >Create Account</a><br><br>
             <a href="contact.jsp" >Contact</a>
         </div>
         <div id="footer">Project Farmerama is being developed by <a href="https://www.facebook.com/mixalis.kwnstantinou?fref=ts">Michalis</a>,
