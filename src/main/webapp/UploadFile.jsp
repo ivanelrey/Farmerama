@@ -6,12 +6,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Upload Files</title>
-        <link rel="stylesheet" type="text/css" href="uploadFileCSS.css">
+        <link rel="stylesheet" type="text/css" href="cssStyles/uploadFileCSS.css">
     </head>
     <body>
         <center><input type="file" id="files" class="input" name="files[]" multiple/><br/><br/><br/><br/><br/>
             <output id="list" ></output><br/>
             <button id="upload" class="uploadBtn uploadBtn-primary">UPLOAD</button></center>
-            <script src="uploadFileJS.js"></script>
+            <script src="javaScripts/uploadFileJS.js"></script>
     </body>
 </html>
