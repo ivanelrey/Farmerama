@@ -10,19 +10,19 @@ and open the template in the editor.
     
     <head>
         <title>Snap</title>   
-        <link rel="stylesheet" type = "text/css" href="style.css">
+        <link rel="stylesheet" type = "text/css" href="cssStyles/CameraPagestyle.css">
  
     </head>
     
     <body>
 </script>
-      <script src="cameraScript.js"></script> 
+      <script src="javaScripts/cameraScript.js"></script> 
         <center>
            <video id="video" class="myVideo" width="320" height="240" autoplay=""></video>
         <br>
         <p>
             <button id="snap" class="snapButton snapButton-primary snapButton-primary:hover">Snap Photo</button>
-            <img src="camera1.png" height="35" width="35"/>
+            <img src="images/camera1.png" height="35" width="35"/>
         </p> 
         <br> 
              <canvas id="canvas" class="myCanvas" width="320" height="240"></canvas>
@@ -30,7 +30,7 @@ and open the template in the editor.
         <p>
             <a id="download" onClick="downloadCanvas(this, 'canvas', 'test.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
              <a id="download"  class="upButton upButton-primary upButtonH-primary">Upload Photo</a>
-            <img src="upload1.png" height="35" width="35"/>
+            <img src="images/upload1.png" height="35" width="35"/>
         </p>
         </center> 
 <script>
@@ -44,7 +44,7 @@ document.getElementById('download').addEventListener('click', function() {
 
 </script>
     
-  <script src="dateTime.js"></script> 
+  <script src="javaScripts/dateTime.js"></script> 
     </body>
     
 </html>
