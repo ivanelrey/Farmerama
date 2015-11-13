@@ -1,0 +1,54 @@
+
+/* 
+    Created on : 8 Νοε 2015, 4:39:42 μμ
+    Author     : Tolis MacNamli
+*/
+ body {
+        width: auto;    
+        height: auto;
+        background-color: #f0f0f0;
+        background:linear-gradient(#808080,#f0f0f0);
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 10px;
+        }      
+        
+        .snapButton {
+	padding: 4px 8px;
+	font-size: 15px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+	text-decoration:activeborder;
+	border-radius:4px;
+	background-color: #ccc;
+	border:0;
+	margin:0;
+        }
+        
+        .snapButton-primary{
+        background: #B2B2B2;
+        color:#fff;
+        }
+
+          .snapButton-primary:hover{
+        background:#D8D8D8;
+        }
+        
+         .upButton {
+	padding: 4px 8px;
+	font-size: 15px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+	text-decoration:activeborder;
+	border-radius:4px;
+	background-color: #ccc;
+	border:0;
+	margin:0;
+        }
+        .upButton-primary{
+        background: #EBEBEB; 
+        color:#B2B2B2;
+        } 
+        
+        .upButtonH-primary:hover{
+        background:#B2B2B2;
+        color:#fff; 
+        }
+        
