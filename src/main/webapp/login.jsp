@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Farmerama</title>
-        <link rel="stylesheet" type = "text/css" href="login.css">
+        <link rel="stylesheet" type = "text/css" href="login.css"><!--to css valto ston fakelo cssStyles kai to path tha einia "cssStyles/login.css-->
     </head>
     <body>
         
@@ -19,7 +19,7 @@
     function pasuser(form) {
     if (form.id.value==="admin") { 
     if (form.pass.value==="admin") {              
-    location="homepage.jsp"; 
+    location="homePage.jsp"; 
     } else {
     alert("Invalid Password");
     }
