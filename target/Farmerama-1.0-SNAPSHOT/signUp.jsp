@@ -15,7 +15,7 @@
     <body>
         <center>
             <form name="form1" action="index.jsp" onsubmit="return validate()">
-                <h2>SnapFarm</h2>
+                <h2>Farmerama</h2>
                 Username <input type="text" name="un" required/>
                 <br/>
                 Password <input type="password" name="pw" required/>
