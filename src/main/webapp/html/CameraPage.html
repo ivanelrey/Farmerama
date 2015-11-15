@@ -1,11 +1,12 @@
 </* global canvas */
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
 <html>
     
     <head>
@@ -15,7 +16,7 @@ and open the template in the editor.
     </head>
     
     <body>
-</script>
+
       <script src="javaScripts/cameraScript.js"></script> 
         <center>
            <video id="video" class="myVideo" width="320" height="240" autoplay=""></video>
@@ -28,7 +29,7 @@ and open the template in the editor.
              <canvas id="canvas" class="myCanvas" width="320" height="240"></canvas>
         <br>
         <p>
-            <a id="download" onClick="downloadCanvas(this, 'canvas', 'test.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
+            <a id="download" onClick="downloadCanvas(this, 'canvas', 'Snap.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
              <a id="download"  class="upButton upButton-primary upButtonH-primary">Upload Photo</a>
             <img src="images/upload1.png" height="35" width="35"/>
         </p>
@@ -39,7 +40,7 @@ function downloadCanvas(link, canvas, filename) {
     link.download = filename;
 }    
 document.getElementById('download').addEventListener('click', function() {
-    downloadCanvas(this, 'canvas', 'test.png');
+    downloadCanvas(this, 'canvas', 'Snap.png');
 }, false);
 
 </script>
