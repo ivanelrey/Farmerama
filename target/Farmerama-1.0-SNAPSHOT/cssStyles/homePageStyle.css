@@ -21,6 +21,11 @@ body{
     background: #eee no-repeat center;
     background-size: cover;
 }
+div.fixed {
+    position:absolute;
+    top: 50px;
+    right: 50px;
+}
 #nav {
     line-height:30px;
     background-color:transparent;

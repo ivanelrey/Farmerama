@@ -9,6 +9,7 @@
         <title>Welcome to Farmerama</title>
     </head>
     <body>
+        <div class="fixed"><input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
         <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
         </div>
         <div id="nav">
