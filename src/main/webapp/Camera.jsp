@@ -9,7 +9,7 @@
     </head>
     
     <body>
-      <%@ include file="html/page.html" %>
+      <%@ include file="html/CameraPage.html" %>
     </body>
     
 </html>

@@ -28,7 +28,8 @@
     }
     //-->
     </script>
-    <h1><i><b>Welcome To Farmerama</b></i></h1>
+    <br><br><br><br><br><br>
+    <center> <h1><i><b>Welcome To Farmerama</b></i></h1>
     <form name="login">
         <br><input name="id" type="text"></br>
         <br><input name="pass" type="password"></br>
@@ -37,6 +38,6 @@
         <br><a href="recovery.jsp">Forgotten Your Password?</a></br>
         <br><a href="signUp.jsp">Not a member Yet? Sign Up Now</a></br>           
     </form>
-
+    </center>
     </body>
 </html>
