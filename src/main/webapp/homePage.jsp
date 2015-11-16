@@ -16,7 +16,7 @@
             <br><input class="myButton" type="submit" value="Upload from file" name="uploadFromFil" onclick="window.location = 'UploadFile.jsp';">
             <br><br><input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">
             <br><br><input class="myButton" type="submit" value="Settings" name="settings" >
-            <br><br><input class="myButton" type="submit" value="Chat" name="chat" >
+            <br><br><input class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
         </div>
     </body>
 </html>
