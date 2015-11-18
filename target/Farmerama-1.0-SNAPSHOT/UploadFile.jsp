@@ -8,7 +8,7 @@
 --%>
 <html>
     <head>
-        
+        <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
     </head>
     
     <body>    

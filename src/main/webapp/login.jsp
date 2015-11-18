@@ -9,7 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Farmerama</title>
+        <title>Login | Farmerama</title>
+        <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
         <link rel="stylesheet" type = "text/css" href="login.css"><!--to css valto ston fakelo cssStyles kai to path tha einia "cssStyles/login.css-->
     </head>
     <body>
