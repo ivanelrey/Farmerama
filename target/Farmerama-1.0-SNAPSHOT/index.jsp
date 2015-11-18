@@ -14,7 +14,7 @@
         <div id="links">
             <a href="login.jsp" STYLE="text-decoration: none">Log In</a><br><br>
             <a href="signUp.jsp" STYLE="text-decoration: none">Create Account</a><br><br>
-            <a href="contact.jsp" STYLE="text-decoration: none">Contact</a>
+            <a href="informations.jsp" STYLE="text-decoration: none">Contact</a>
         </div>
         <div id="animatedFarmer">
             <img id="farmer" src="images/farmerHomePage.GIF" width="364" height="338" alt="farmerHomePage">
