@@ -6,16 +6,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="cssStyles/indexStyle.css">
+         <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
         <title>FARMERAMA</title>
     </head>
     <body >
         <div id="header">FARMERAMA</div>
-        <div id="logIn">
-            <a href="login.jsp" >Log In</a><br><br>
-            <a href="signUp.jsp" >Create Account</a><br><br>
-            <a href="contact.jsp" >Contact</a>
+        <div id="links">
+            <a href="login.jsp" STYLE="text-decoration: none">Log In</a><br><br>
+            <a href="signUp.jsp" STYLE="text-decoration: none">Create Account</a><br><br>
+            <a href="contact.jsp" STYLE="text-decoration: none">Contact</a>
         </div>
-        <div id="footer">Project Farmerama is being developed by <a href="https://www.facebook.com/mixalis.kwnstantinou?fref=ts">Michalis</a>,
+        <div id="animatedFarmer">
+            <img id="farmer" src="images/farmerHomePage.GIF" width="364" height="338" alt="farmerHomePage">
+        </div>
+        <div id="footer">Project Farmerama is being developed by 
+            <a href="https://www.facebook.com/mixalis.kwnstantinou?fref=ts">Michalis</a>
             <a href="https://www.facebook.com/tolis.toliss?fref=ts">Tolis</a>
             <a href="https://www.facebook.com/nena.zanta?fref=ts">Nena</a>
             <a href="https://www.facebook.com/kostas.orfan?fref=ts">Kostas</a>

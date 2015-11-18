@@ -12,6 +12,12 @@
         <div class="fixed"><input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
         <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
         </div>
+        <div id="information">
+                NAME:
+            <br>AGE: 
+            <br>COUNTRY:
+            <br>CITY:
+        </div>
         <div id="nav">
             <br><input class="myButton" type="submit" value="Upload from file" name="uploadFromFil" onclick="window.location = 'UploadFile.jsp';">
             <br><br><input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">

@@ -51,3 +51,14 @@ input {
 .chat-name {
     outline: none;
 }
+#header{
+    background-color:transparent;
+    color:brown;
+    text-align:center;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding:10px;
+    font-size: 35px;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    cursor: default;
+}

@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="cssStyles/chatPageStyle.css">
     </head>
     <body>
+        <h1 id="header">CHAT WITH FARMERS</h1>
         <div class="chat">
             <input type="text" class="chat-name" placeholder="Name of this user">
             <div class="chat-messages">
