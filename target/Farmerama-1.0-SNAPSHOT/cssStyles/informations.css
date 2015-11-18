@@ -24,3 +24,24 @@ and open the template in the editor.
 .inform{
     font-size:130%;
 }
+
+.styled-select select {
+   background: lightgray;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   cursor: pointer;
+   }
+   
+   .styled-select {
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url(new_arrow.png) no-repeat right white;
+   border: 2px #000040;
+   }

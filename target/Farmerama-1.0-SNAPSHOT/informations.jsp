@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+       
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
         <title>Informations | Farmerama</title>
@@ -22,7 +22,16 @@
         <a href="index.jsp"><img src="images/farmeramaLogo.jpg" height="27" width="187" class="logo"></a>
         <a href="login.jsp" class="header" STYLE="text-decoration: none">LOGIN</a>
         <a href="signUp.jsp" class="header" STYLE="text-decoration: none">CREATE ACCOUNT</a>
-        <center><p class="inform">
+        
+        <div class="styled-select">
+        <select style="position: absolute; top: 10px; right: 10px;">
+            <option selected value="Greek">Greek</option>
+            <option value="English">English</option>
+        </select>
+        </div>
+        
+        <center>
+            <p class="inform">
             <br><br><br><b>ΠΛΗΡΟΦΟΡΙΕΣ ΣΕΛΙΔΑΣ</b><br><br>
             
             <b>Ημερομηνία έναρξης:</b>
@@ -44,9 +53,15 @@
             ακόμη περισσότερο τη γκάμα προϊόντων και υπηρεσιών μας.<br><br><br><br>
             
             <b>Ιδρύθηκε από τους:</b><br>
-            Τόλη Ναμλή, Γιάννη Γκομαρτέλι, Νένα Ζαντοπούλου, Μιχάλη Κωνσταντίνου και Κώστα Ορφανίδη<br>
-        </p></center>
-        
+            Τόλη Ναμλή, Γιάννη Γκομαρτέλι, Νένα Ζαντοπούλου, Μιχάλη Κωνσταντίνου, Κώστα Ορφανίδη και Γρηγόρη Αράπογλου<br><br><br>
+            
+                </p>
+        </center>
+        <b>
+            <i>
+                <font size="4">Η ιστοσελίδα είναι υπό κατασκευή και θα είναι έτοιμη σε 2 μήνες!</font>
+            </i>
+        </b>
         
         
     </body>
