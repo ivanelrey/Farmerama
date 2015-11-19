@@ -20,9 +20,24 @@ body {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     padding:10px;
     font-size: 35px;
-   // animation-direction: alternate;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    cursor: default;
 }
-#logIn{
+#animatedFarmer{
+    position:absolute;
+    bottom: 10px;
+    left: 20px;
+    cursor: none;
+}
+#farmer{
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+}
+#links{
     line-height:30px;
     background-color:transparent;
     height:300px;
@@ -30,7 +45,6 @@ body {
     float:right;
     padding:5px;
     font-size: 30px;
-    
 }
 #footer {
     background-color:black;

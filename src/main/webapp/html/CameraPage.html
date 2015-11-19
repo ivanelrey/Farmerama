@@ -1,0 +1,51 @@
+</* global canvas */
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    
+    <head>
+        <title>Snap | Farmerama</title>   
+        <link rel="stylesheet" type = "text/css" href="cssStyles/CameraPagestyle.css">
+ 
+    </head>
+    
+    <body>
+
+      <script src="javaScripts/cameraScript.js"></script> 
+        <center>
+           <video id="video" class="myVideo" width="320" height="240" autoplay=""></video>
+        <br>
+        <p>
+            <button id="snap" class="snapButton snapButton-primary snapButton-primary:hover">Snap Photo</button>
+            <img src="images/camera1.png" height="35" width="35"/>
+        </p> 
+        <br> 
+             <canvas id="canvas" class="myCanvas" width="320" height="240"></canvas>
+        <br>
+        <p>
+            <a id="download" onClick="downloadCanvas(this, 'canvas', 'Snap.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
+             <a id="download"  class="upButton upButton-primary upButtonH-primary">Upload Photo</a>
+            <img src="images/upload1.png" height="35" width="35"/>
+        </p>
+        </center> 
+<script>
+function downloadCanvas(link, canvas, filename) {
+    link.href = document.getElementById(canvas).toDataURL();
+    link.download = filename;
+}    
+document.getElementById('download').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'Snap.png');
+}, false);
+
+</script>
+    
+  <script src="javaScripts/dateTime.js"></script> 
+    </body>
+    
+</html>

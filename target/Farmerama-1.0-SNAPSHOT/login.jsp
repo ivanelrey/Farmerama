@@ -9,8 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Farmerama</title>
-        <link rel="stylesheet" type = "text/css" href="login.css">
+        <title>Login | Farmerama</title>
+        <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
+        <link rel="stylesheet" type = "text/css" href="login.css"><!--to css valto ston fakelo cssStyles kai to path tha einia "cssStyles/login.css-->
     </head>
     <body>
         
@@ -19,7 +20,7 @@
     function pasuser(form) {
     if (form.id.value==="admin") { 
     if (form.pass.value==="admin") {              
-    location="homepage.jsp"; 
+    location="homePage.jsp"; 
     } else {
     alert("Invalid Password");
     }
@@ -28,7 +29,8 @@
     }
     //-->
     </script>
-    <h1><i><b>Welcome To Farmerama</b></i></h1>
+    <br><br><br><br><br><br>
+    <center> <h1><i><b>Welcome To Farmerama</b></i></h1>
     <form name="login">
         <br><input name="id" type="text"></br>
         <br><input name="pass" type="password"></br>
@@ -37,6 +39,6 @@
         <br><a href="recovery.jsp">Forgotten Your Password?</a></br>
         <br><a href="signUp.jsp">Not a member Yet? Sign Up Now</a></br>           
     </form>
-
+    </center>
     </body>
 </html>
