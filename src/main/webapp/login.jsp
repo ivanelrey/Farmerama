@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login | Farmerama</title>
         <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
-        <link rel="stylesheet" type = "text/css" href="login.css"><!--to css valto ston fakelo cssStyles kai to path tha einia "cssStyles/login.css-->
+        <link rel="stylesheet" type = "text/css" href="cssStyles/loginstyle.css"><!--to css valto ston fakelo cssStyles kai to path tha einia "cssStyles/login.css-->
     </head>
     <body>
         
@@ -26,19 +26,19 @@
     }
     } else {  alert("Invalid UserID");
     }
-    }
+    }    
     //-->
     </script>
     <br><br><br><br><br><br>
     <center> <h1><i><b>Welcome To Farmerama</b></i></h1>
-    <form name="login">
-        <br><input name="id" type="text"></br>
-        <br><input name="pass" type="password"></br>
-        <br><input type="button" value="Login" onClick="pasuser(this.form)">
-        <input type="Reset"></br>
+    <form name="login" action="#">
+        <br><input name="id" type="text" onKeydown="Javascript: if (event.keyCode==13) pasuser(this.form);"></br>
+        <br><input name="pass" type="password" onKeydown="Javascript: if (event.keyCode==13) pasuser(this.form);"></br>
+        <br><input class="lgnbut" type="button" value="Login" onClick="pasuser(this.form)">
+        <input class="lgnbut" type="Reset"></br>
         <br><a href="recovery.jsp">Forgotten Your Password?</a></br>
         <br><a href="signUp.jsp">Not a member Yet? Sign Up Now</a></br>           
-    </form>
+    </form>  
     </center>
     </body>
 </html>
