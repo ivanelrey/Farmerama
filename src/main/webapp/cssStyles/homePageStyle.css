@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 21, 2015, 7:16:13 PM
+    Author     : MICHALIS
+*/
+body{
+    margin-top: 0;
+    margin-left: 0;
+    background: rgba(72,214,36,1);
+    background: -moz-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(72,214,36,1)), color-stop(100%, rgba(29,143,0,0.95)));
+    background: -webkit-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
+    background: -o-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
+    background: -ms-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48d624', endColorstr='#1d8f00', GradientType=1 );
+}
+#profileImageStyle{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 1px;
+    text-align: left;
+    background: #eee no-repeat center;
+    background-size: cover;
+    cursor: none;
+    -webkit-box-shadow: 0px 0px 95px 24px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 0px 95px 24px rgba(0,0,0,0.51);
+    box-shadow: 0px 0px 95px 24px rgba(0,0,0,0.51);
+    
+}
+#information{
+    position:absolute;
+    top: 50px;
+    left: 280px;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    cursor: default;
+}
+div.fixed {
+    position:absolute;
+    top: 50px;
+    right: 50px;
+}
+#nav {
+    line-height:30px;
+    background-color:transparent;
+    height:100%;
+    width:240px;
+    text-align: center;
+    float:left;
+    padding:5px;	      
+}
+#profileImg {
+    background-color:transparent;
+    color:white;
+    margin-left: 0px;
+    width:100%;
+    text-align:left;
+    padding:0px;
+    pointer-events: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+       -webkit-box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
+-moz-box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
+box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:static;
+	top:1px;
+}
+
