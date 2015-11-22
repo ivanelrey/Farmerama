@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
         <title>Photos</title>
     </head>
     <body>
@@ -24,7 +25,8 @@
         
         <img src="<%=giannis%>">
         
-        
+        <div class="fixed"> <input class="myButton" type="submit" value="Home Page" name="hp" onclick="window.location = 'homePage.jsp';">
+       </div>
         
         
     </body>
