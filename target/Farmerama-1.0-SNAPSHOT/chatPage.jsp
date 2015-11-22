@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Chat With Farmerama Users</title>
         <link rel="stylesheet" type="text/css" href="cssStyles/chatPageStyle.css">
+        <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
     </head>
     <body>
         <h1 id="header">CHAT WITH FARMERS</h1>

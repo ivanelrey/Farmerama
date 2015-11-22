@@ -7,7 +7,7 @@
     <head>
         <title>Snap</title>   
         <link rel="stylesheet" type = "text/css" href="cssStyles/CameraPagestyle.css">
-
+<link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
     </head>
 
     <body>
