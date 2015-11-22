@@ -33,7 +33,7 @@ public class photoServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+      
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -62,13 +62,15 @@ public class photoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
-        response.setContentType("text/html");
+        
+         response.setContentType("text/html");
         String imgURL = request.getParameter("name");
         System.out.println(imgURL);
         PhotoAlbum pa = new PhotoAlbum();
         pa.putInDb(imgURL);
-
+        
+        
+        
         processRequest(request, response);
     }
 
