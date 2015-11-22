@@ -16,7 +16,7 @@ import com.mongodb.Mongo;
  *
  * @author Gomesito
  */
-public class PhotoAlbum  {
+public class PhotoAlbum implements PhotoAlbumInterface {
 
     DB db;
     DBCollection photo;
@@ -29,6 +29,7 @@ public class PhotoAlbum  {
     }
 
     
+    @Override
     public void putInDb(String s) {
 
         BasicDBObject document = new BasicDBObject();
@@ -38,6 +39,7 @@ public class PhotoAlbum  {
 
     }
     
+    @Override
     public String getUserName() {
         BasicDBObject searchQuery = new BasicDBObject();
         searchQuery.put("userName", "tolis");
