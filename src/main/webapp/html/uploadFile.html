@@ -61,21 +61,40 @@ and open the template in the editor.
                     var canvasToDtaUrl = cnvs.toDataURL("image/jpeg");
                 };
             };
+			
+			function upload(canvas) {
+                       
+                        var x = document.getElementById("cnvsForFormat").toDataURL().toString();
+                        document.getElementById("skata").value = x;
+                        
+                    }
+            
         </script>
-        
-        <center>
-            <form class='frmUpload'>
-                <input name="picOneUpload" type="file" class="input" accept="image/*" onchange="picUpload(this.files[0])" ><br/><br/><br/><br/>
-            </form>
 
-            <canvas id="cnvsForFormat" width="400" height="266" style="border:1px solid #c3c3c3"></canvas>
-            <div id='allImgProperties' style="display:inline"></div><br/><br/><br/><br/>
-            <div id='imgTwoForJPG'></div>
-            <input type="button" value="UPLOAD" class="upload" /><br/><br/>
-        </center>
-    
-        <address class="address">Made 11 November 2015<br>by Nena Zantopoulou.</address>
+    <center>
+        <form class='frmUpload'>
+            <input name="picOneUpload" type="file" class="input" accept="image/*" onchange="picUpload(this.files[0])" ><br/><br/><br/><br/>
+        </form>
+
+        <canvas id="cnvsForFormat" width="400" height="266" style="border:1px solid #c3c3c3"></canvas>
+        <div id='allImgProperties' style="display:inline"></div><br/><br/><br/><br/>
+        <div id='imgTwoForJPG'></div>
         
-    </body>
-    
+        <form method="post" action="photoServlet">
+            <p>
+
+                <input type="text" id="skata" name="name" /> 
+
+                <a  id="upload"  onClick="upload('canvas')" class="upload" >Upload to Album</a>
+                <input type="submit" />
+
+            </p>
+        </form>
+         <br/><br/>
+    </center>
+
+    <address class="address">Made 11 November 2015<br>by Nena Zantopoulou.</address>
+
+</body>
+
 </html>
