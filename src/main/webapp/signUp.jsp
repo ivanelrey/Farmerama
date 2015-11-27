@@ -17,7 +17,7 @@
     </head>
     <body>
         <center>
-            <form name="form1" action="SignUpServlet" method="post" >
+            <form name="form1" action="SignUpServlet" method="post" onSubmit="return validate(this);" >
                 <h2>Farmerama</h2>
                 Username <input type="text" name="un" required/>
                 <br/>

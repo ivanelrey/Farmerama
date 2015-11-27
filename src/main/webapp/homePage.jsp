@@ -4,6 +4,7 @@
     Author     : MICHALIS
 --%>
 
+<%@page import="com.mycompany.Farmerama.LoginCheckUserToDb"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -16,11 +17,17 @@
         <title>Welcome to Farmerama</title>
     </head>
     <body>
+        
+        <%  LoginCheckUserToDb ch = new LoginCheckUserToDb();       
+            String user = ch.userName;
+        %>
+        
+        
         <div class="fixed"><input type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" /> <input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
         <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
         </div>
         <div id="information">
-                NAME:
+            NAME: ${sessionScope.name}
             <br>AGE: 
             <br>COUNTRY:
             <br>CITY:

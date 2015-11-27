@@ -16,26 +16,18 @@
     <body>
         
     <script language="javascript">
-    <!--//    
-    function pasuser(form) {
-    if (form.id.value==="admin") { 
-    if (form.pass.value==="admin") {              
-    location="homePage.jsp"; 
-    } else {
-    alert("Invalid Password");
-    }
-    } else {  alert("Invalid UserID");
-    }
-    }    
-    //-->
+       
+    
+  
     </script>
     <br><br><br><br><br><br>
-    <center> <h1><i><b>Welcome To Farmerama</b></i></h1>
-    <form name="login" action="#">
-        <br><input name="id" type="text" onKeydown="Javascript: if (event.keyCode==13) pasuser(this.form);"></br>
-        <br><input name="pass" type="password" onKeydown="Javascript: if (event.keyCode==13) pasuser(this.form);"></br>
-        <br><input class="lgnbut" type="button" value="Login" onClick="pasuser(this.form)">
-        <input class="lgnbut" type="Reset"></br>
+    <center> <h1><b>Welcome To Farmerama</b></h1>
+    <form method="post" name="login" action="LoginServlet">
+        <br>Username: <input name="userName" type="text" onKeydown="Javascript: if (event.keyCode==13) "></br>
+        <br>Password: <input name="passWord" type="password" onKeydown="Javascript: if (event.keyCode==13) "></br>
+        <br><input class="lgnbut" type="submit" value="Login" >
+        <br><br>
+        <input class="lgnbut" type="Reset" value="Reset"></br>
         <br><a href="recovery.jsp">Forgotten Your Password?</a></br>
         <br><a href="signUp.jsp">Not a member Yet? Sign Up Now</a></br>           
     </form>  
