@@ -1,85 +1,67 @@
-function validate()
+function validate(form)
 {
     //variables
-    var x = document.forms["form1"]["un"].value;
-    var y = document.forms["form1"]["pw"].value;
-    var splitX = x.split('');
+    var re = /^\w+$/;
     
-    //conditions
-    if(splitX[0] >= '0' && splitX[0] <= '9')
+    if(!re.test(form.un.value)) 
     {
-        //First character cannot be number. Please try again!
-        alert("Invalid input.");
-        document.forms["form1"]["un"].value = "";
-        document.forms["form1"]["pw"].value = "";
+        alert("Error: Username must contain only letters, numbers and underscores!");
+        form.un.focus();
         return false;
     }
-    else if(x.length <= 6 && x.length => 14)
+    if(form.un.value.length < 6)
     {
-        //Username must be between 6 to 14 characters
-        alert("Invalid input.");
-        document.forms["form1"]["un"].value = "";
-        document.forms["form1"]["pw"].value = "";
+        alert("Error: Username must contain at least 6 characters!");
+        form.un.focus();
         return false;
-    }
-    else if(y.length <= 6 && y.length => 14)
-    {
-        //Password must be between 6 to 14 characters
-        alert("Invalid input.");
-        document.forms["form1"]["un"].value = "";
-        document.forms["form1"]["pw"].value = "";
-        return false;
-    }
-    else if(special(x) === true)
-    { 
-        //Username must not contain special characters
-        alert("Input invalid");
-        document.forms["form1"]["un"].value = "";
-        document.forms["form1"]["pw"].value = "";
-        return false;
-    }
-    else if(isUpperCase(y) === true)
-    {
-        //Password must contain at least on LOWERCASE character
-        alert("Invalid input.");
-        document.forms["form1"]["un"].value = "";
-        document.forms["form1"]["pw"].value = "";
-        return false;
-    }
-    else if(isLowerCase(y) === true)
-    {
-        //Password must contain at least on UPPERCASE character
-        alert("Invalid input.");
-        document.forms["form1"]["un"].value = "";
-        document.forms["form1"]["pw"].value = "";
-        return false;
-    }
-    else
-    {
-        alert("Success!");
-        return true;
     }
     
-}
-function isUpperCase(str)
-{
-    return str === str.toUpperCase();
-}
-function isLowerCase(str)
-{
-    return str === str.toLowerCase();
-}
-function special(str)
-{
-    var iChars = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
+    if(form.pw.value === form.pw1.value) 
+    {
+        if(form.pw.value.length < 6) 
+        {
+            alert("Error: Password must contain at least six characters!");
+            form.pw.focus();
+            return false;
+        }
+        if(form.pw.value === form.un.value) 
+        {
+            alert("Error: Password must be different from Username!");
+            form.pw.focus();
+            return false;
+        }
+        re = /[0-9]/;
+        if(!re.test(form.pw.value)) 
+        {
+            alert("Error: Password must contain at least one number (0-9)!");
+            form.pw.focus();
+            return false;
+        }
+        re = /[a-z]/;
+        if(!re.test(form.pw.value)) 
+        {
+            alert("Error: Password must contain at least one lowercase letter (a-z)!");
+            form.pw.focus();
+            return false;
+        }
+        re = /[A-Z]/;
+        if(!re.test(form.pw.value)) 
+        {
+            alert("Error: Password must contain at least one uppercase letter (A-Z)!");
+            form.pw.focus();
+            return false;
+        }
+    } 
+    else 
+    {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pw.focus();
+      return false;
+    }
 
-    for (var i = 0; i < str.length; i++) {
-       if (iChars.indexOf(str.charAt(i)) !== -1) {
-           alert ("File name has special characters ~`!#$%^&*+=-[]\\\';,/{}|\":<>? \nThese are not allowed\n");
-           return false;
-       }
-    }
+    alert("You entered a valid password: " + form.pw.value + "\nPlease take note of your password\nfor maximum security.");
     return true;
 }
+
 
 
