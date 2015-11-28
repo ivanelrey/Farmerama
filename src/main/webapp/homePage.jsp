@@ -49,6 +49,9 @@
             <br><br><input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">
             <br><br><input class="myButton" type="submit" value="Settings" name="settings" >
             <br><br><input class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
+            <br><br><span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;">
+                <a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.1.16606&bannertypeclick=wu_bluestripes" title="Σέρρες, Ελλάδα Weather Forecast" target="_blank">
+                <img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_bluestripes_metric&airportcode=LGTS&ForcedCity=Σέρρες&ForcedState=Ελλάδα&wmo=16606&language=GR" alt="Find more about Weather in Σέρρες, GR" width="160" /></a><br></span>
         </div>
     </body>
 </html>
