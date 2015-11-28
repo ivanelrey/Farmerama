@@ -17,6 +17,8 @@ public class SignUpVal implements SignUpInterface
     private String pWord;
     private String pWord1;
     private String eMail;
+    private String sex;
+    private String section;
     DBCollection account;
     DB db;
     
@@ -27,6 +29,14 @@ public class SignUpVal implements SignUpInterface
         account = db.getCollection("account");
     }
     
+    public void setSection(String section)
+    {
+        this.section = section;
+    }
+    public void setSex(String sex)
+    {
+        this.sex = sex;
+    }
     public void setUsrName(String usrName)
     {
         this.usrName = usrName;
@@ -44,6 +54,14 @@ public class SignUpVal implements SignUpInterface
         this.eMail = eMail;
     }
     
+    public String getSection()
+    {
+        return section;
+    }
+    public String getSex()
+    {
+        return sex;
+    }
     public String getUsrName()
     {
         return usrName;
@@ -69,12 +87,14 @@ public class SignUpVal implements SignUpInterface
     }
 
     @Override
-    public void setDoc(String un, String pw, String email) 
+    public void setDoc(String un, String pw, String email, String sex, String section) 
     {
         BasicDBObject obj = new BasicDBObject();
         obj.put("user", un);
         obj.put("password", pw);
         obj.put("email", email);
+        obj.put("sex", sex);
+        obj.put("section", section);
         account.insert(obj);
     }
 }

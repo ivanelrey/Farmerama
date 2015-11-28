@@ -2,13 +2,26 @@ function validate(form)
 {
     //variables
     var re = /^\w+$/;
+    var ra = ["0","1","2","3","4","5","6","7","8","9"];
+    var x = form.un.value;
+    var splitX = x.split('');
+    var firstChar = splitX[0];
     
-    if(!re.test(form.un.value)) 
+    //Not fixed: 1st character not number
+    /*
+     * if(form.un.value.matches("[0-9].*"))
     {
-        alert("Error: Username must contain only letters, numbers and underscores!");
+        alert("Error: Username can't start with number!");
         form.un.focus();
         return false;
     }
+     */
+    if(!re.test(form.un.value)) 
+        {
+            alert("Error: Username must contain only letters, numbers and underscores!");
+            form.un.focus();
+            return false;
+        }
     if(form.un.value.length < 6)
     {
         alert("Error: Username must contain at least 6 characters!");
@@ -20,7 +33,7 @@ function validate(form)
     {
         if(form.pw.value.length < 6) 
         {
-            alert("Error: Password must contain at least six characters!");
+            alert("Error: Password must contain at least 6 characters!");
             form.pw.focus();
             return false;
         }
