@@ -1,9 +1,10 @@
+package com.mycompany.Farmerama;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.Farmerama;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,13 +13,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Tolis MacNamli
+ * @author Gomesito
  */
-@WebServlet(name = "photoServlet", urlPatterns = {"/photoServlet"})
-public class photoServlet extends HttpServlet {
+@WebServlet(urlPatterns = {"/seeOtherServlet"})
+public class seeOtherServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,9 +33,7 @@ public class photoServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-      
+        response.setContentType("text/html;charset=UTF-8");       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -63,13 +63,10 @@ public class photoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-         response.setContentType("text/html");
-        String imgURL = request.getParameter("name");
-        String user = request.getParameter("userName");
-        System.out.println(imgURL);
-        PhotoAlbum pa = new PhotoAlbum(user);
-        pa.putInDb(imgURL,user);
-        
+        String otherUser = request.getParameter("otheruser");
+        HttpSession session1 = request.getSession();
+        session1.setAttribute("otherUser", otherUser);
+        response.sendRedirect("otherHomePage.jsp");
         
         
         processRequest(request, response);

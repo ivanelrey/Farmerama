@@ -4,6 +4,7 @@
     Author     : MICHALIS
 --%>
 
+<%@page import="com.mycompany.Farmerama.getAllAccounts"%>
 <%@page import="com.mycompany.Farmerama.LoginCheckUserToDb"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -32,6 +33,17 @@
             <br>COUNTRY:
             <br>CITY:
         </div>
+        <center>
+        <form action="seeOtherServlet" method="POST">
+            <select name="otheruser"  size="5">
+                 <% getAllAccounts acc = new getAllAccounts();%>
+                <% for(int i = 0; i <acc.getAccounts().size(); i++) { %>
+                <option ><%=acc.getAccounts().get(i) %></option>
+                <% } %>
+             </select>
+            <input type="submit"  value="find friend in random" /> 
+        </form>
+        </center>
         <div id="nav">
             <br><input class="myButton" type="submit" value="Upload from file" name="uploadFromFil" onclick="window.location = 'UploadFile.jsp';">
             <br><br><input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">

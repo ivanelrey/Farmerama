@@ -21,20 +21,20 @@ public class PhotoAlbum implements PhotoAlbumInterface {
     DB db;
     DBCollection photo;
 
-    public PhotoAlbum() {
+    public PhotoAlbum(String username) {
         Mongo mongo = new Mongo("localhost", 27017);
         db = mongo.getDB("album");
-        photo = db.getCollection("photo");
+        photo = db.getCollection(username);
         //initComponents();
     }
 
     
     @Override
-    public void putInDb(String s) {
+    public void putInDb(String s, String user) {
 
         BasicDBObject document = new BasicDBObject();
         document.put("photoURL", s);
-        document.put("userName", "tolis");
+        document.put("userName", user);
         photo.insert(document);
 
     }
