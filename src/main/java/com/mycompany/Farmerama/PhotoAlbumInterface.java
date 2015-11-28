@@ -11,7 +11,7 @@ package com.mycompany.Farmerama;
  */
 public interface PhotoAlbumInterface {
    
-    public void putInDb(String s); 
+    public void putInDb(String s,String user); 
     
     public String getUserName();
     

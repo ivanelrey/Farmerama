@@ -10,20 +10,19 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 
 /**
  *
- * @author Tolis MacNamli
+ * @author Gomesito
  */
-public class LoginCheckUserToDb extends HttpServlet {
+public class getAllAccounts {
     
     DB db;
     DBCollection account;
-    public String userName;
     
-    public LoginCheckUserToDb() {
+    
+    public getAllAccounts() {
         Mongo mongo = new Mongo("localhost", 27017);
         db = mongo.getDB("accounts");
         account = db.getCollection("account");
@@ -31,17 +30,16 @@ public class LoginCheckUserToDb extends HttpServlet {
     }   
     
     
-    public void checkUser(String user, String pass) {
-       
+    public ArrayList<String> getAccounts() {
+        ArrayList<String> allUsers = new  ArrayList<String>();
         BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("user", user);
-        searchQuery.put("password",pass);
-        DBCursor cursor = account.find(searchQuery);
-        userName = cursor.next().get("user").toString();
-        
+        DBCursor cursor = account.find();
+        while(cursor.hasNext())
+        {
+        allUsers.add(cursor.next().get("user").toString());
+        }
+        return allUsers;
    
       
     }
-
-    
 }
