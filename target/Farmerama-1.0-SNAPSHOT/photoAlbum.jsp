@@ -16,24 +16,16 @@
     </head>
     <body>
         
-        <form action="photoServlet" method="POST">
-        
-        <input type="hidden" name="userName" value= ${sessionScope.name} >
-        <img src=${sessionScope.imageUrl} >
-
-        <input type="submit" value="btn" />
-        </form>
         
         
-        
-       <!-- <%
+        <%
             PhotoAlbum pa1 = new PhotoAlbum();
             String giannis = pa1.getUserName();
             
         %>
         
         <img src="<%=giannis%>">
-        -->
+        
         <div class="fixed"> <input class="myButton" type="submit" value="Home Page" name="hp" onclick="window.location = 'homePage.jsp';">
        </div>
         
