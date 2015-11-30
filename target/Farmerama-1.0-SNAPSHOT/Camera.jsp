@@ -27,7 +27,7 @@
                <p>
                 <a id="download" onClick="downloadCanvas(this, 'canvas', 'Snap.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
                 <input type="text" id="skata" name="name" /> 
-                
+                <input type="hidden" name="userName" value=${sessionScope.name} >
                 <a id="upload"  onClick="uploadCanvas('canvas')" class="upButton upButton-primary upButtonH-primary" >Upload to Album</a>
                 <input type="submit" />
                 <img src="images/upload1.png" height="35" width="35"/>

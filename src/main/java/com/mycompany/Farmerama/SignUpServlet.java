@@ -67,7 +67,8 @@ public class SignUpServlet extends HttpServlet {
         SignUpVal user = new SignUpVal();
         //user.setUsrName(request.getParameter("un"));
         //user.setPWord(request.getParameter("pw"));
-        user.setDoc(request.getParameter("un"), request.getParameter("pw"), request.getParameter("eMail"));
+        user.setDoc(request.getParameter("un"), request.getParameter("pw"), request.getParameter("eMail"),
+                request.getParameter("sex"), request.getParameter("section"));
         processRequest(request, response);
     }
 
