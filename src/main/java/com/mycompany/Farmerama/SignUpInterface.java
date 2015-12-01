@@ -13,5 +13,5 @@ package com.mycompany.Farmerama;
 public interface SignUpInterface 
 {
     public void getDoc();
-    public void setDoc(String un, String pw, String email);
+    public void setDoc(String un, String pw, String email, String sex, String section);
 }
