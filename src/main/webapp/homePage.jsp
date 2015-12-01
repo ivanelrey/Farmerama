@@ -4,6 +4,7 @@
     Author     : MICHALIS
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.mycompany.Farmerama.getAllAccounts"%>
 <%@page import="com.mycompany.Farmerama.LoginCheckUserToDb"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -33,14 +34,22 @@
             <br>COUNTRY:
             <br>CITY:
         </div>
+        
         <center>
+            <form action="searchServlet" method="POST">
+                <input type="text" name="search" />
+                <input type="submit" value="search" />
+            </form>
         <form action="seeOtherServlet" method="POST">
-            <select name="otheruser"  size="5">
-                 <% getAllAccounts acc = new getAllAccounts();%>
-                <% for(int i = 0; i <acc.getAccounts().size(); i++) { %>
-                <option ><%=acc.getAccounts().get(i) %></option>
-                <% } %>
-             </select>
+              <%  ArrayList<String> sessionVal = (ArrayList<String>) session.getAttribute("allFoundUsers");
+                 if(sessionVal!=null) {  %>
+               <select name="otheruser"  size="5">
+                   <%for (int i = 0; i <sessionVal.size(); i++) {%>
+                   
+                   
+                   <option ><%=sessionVal.get(i) %> </option>
+                <% } } %> 
+               </select>
             <input type="submit"  value="find friend in random" /> 
         </form>
         </center>

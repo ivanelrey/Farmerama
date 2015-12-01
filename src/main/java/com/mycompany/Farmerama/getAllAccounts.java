@@ -32,14 +32,22 @@ public class getAllAccounts {
     
     public ArrayList<String> getAccounts() {
         ArrayList<String> allUsers = new  ArrayList<String>();
-        BasicDBObject searchQuery = new BasicDBObject();
         DBCursor cursor = account.find();
         while(cursor.hasNext())
         {
         allUsers.add(cursor.next().get("user").toString());
         }
         return allUsers;
-   
-      
+    }
+    public ArrayList<String> getSearchedAccounts(String inputedS) {
+        ArrayList<String> allFoundUsers = new  ArrayList<String>();
+        BasicDBObject searchQuery = new BasicDBObject();
+        searchQuery.append("user",new BasicDBObject("$regex",inputedS));
+        DBCursor cursor = account.find(searchQuery);
+        while(cursor.hasNext())
+        {
+        allFoundUsers.add(cursor.next().get("user").toString());
+        }
+        return allFoundUsers;
     }
 }
