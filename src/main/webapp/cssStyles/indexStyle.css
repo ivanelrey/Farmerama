@@ -4,48 +4,38 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 11 Νοε 2015, 7:23:16 μμ
-    Author     : Gomesito
+    Created on : 2 Δεκ 2015, 1:32:28 πμ
+    Author     : Nena
 */
 body {
-    background-image: url("../images/mainBackground.jpg");
-    background-color: #cccccc;
-    background-size: cover;
-    text-align: center;
+    background: linear-gradient(to bottom right, white, #bcbdc4);
+    height: 700px;
 }
-#header {
-    background-color:transparent;
-    color:brown;
-    text-align:center;
-    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-    padding:10px;
-    font-size: 35px;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    cursor: default;
+
+.headerx{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 7;
+    font-family: verdana;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 }
-#animatedFarmer{
-    position:absolute;
-    bottom: 10px;
-    left: 20px;
-    cursor: none;
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: #000040;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 7;
+    font-family: verdana;
 }
-#farmer{
-    width: 50%;
-    height: 50%;
-    pointer-events: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-}
-#links{
-    line-height:30px;
-    background-color:transparent;
-    height:300px;
-    width:300px;
-    float:right;
-    padding:5px;
-    font-size: 30px;
-}
+
 #footer {
     background-color:black;
     color:white;
@@ -56,4 +46,44 @@ body {
     width: 100%;
     text-align:center;
     padding:5px;	 	 
+}
+
+#links{
+    top: 40px;
+    left: 900px;
+    font-family: verdana;
+    font-size: 50px;
+    width: 500px;
+    height: 60px;
+}
+
+#img1{left:100px;
+    height: 50px;
+    width: 110px;
+    top: 25px;
+}
+
+.bodyx{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 645px;
+}
+
+#intro{
+    top: 40px;
+    left: 100px;
+    font-family: verdana;
+    font-size: 40px;
+    color: #142170;
+    height: 75px;
+    width: 550px;
+}
+
+#img2{
+    top: 500px;
+    left: 200px;
+    height: 250px;
+    width: 500px;
 }
