@@ -70,6 +70,8 @@ public class photoServlet extends HttpServlet {
         PhotoAlbum pa = new PhotoAlbum(user);
         pa.putInDb(imgURL,user);
         
+        response.sendRedirect("homePage.jsp");
+        
         
         
         processRequest(request, response);

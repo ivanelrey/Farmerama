@@ -16,24 +16,14 @@
     </head>
     <body>
         
-        <form action="photoServlet" method="POST">
-        
-        <input type="hidden" name="userName" value= ${sessionScope.name} >
-        <img src=${sessionScope.imageUrl} >
+     <form method="POST" action="PhotoAlbumServlet">
 
-        <input type="submit" value="btn" />
+            <input type="text" name="photo" value=${sessionScope.name} >
+            <input type="submit" value="Show images" />
+
         </form>
-        
-        
-        
-       <!-- <%
-            PhotoAlbum pa1 = new PhotoAlbum();
-            String giannis = pa1.getUserName();
-            
-        %>
-        
-        <img src="<%=giannis%>">
-        -->
+           
+        <img src=${sessionScope.photo.get(0)} > 
         <div class="fixed"> <input class="myButton" type="submit" value="Home Page" name="hp" onclick="window.location = 'homePage.jsp';">
        </div>
         
