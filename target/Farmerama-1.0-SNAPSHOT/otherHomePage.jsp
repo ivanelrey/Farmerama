@@ -27,9 +27,7 @@
             <br>CITY:
         </div>
         //
-        <form action="seeOtherServlet" method="POST">
-            <input type="submit" name="me" value="homePage" /> 
-        </form>
+        <input type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
         //
         <div id="nav">
         </div>

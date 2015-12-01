@@ -5,6 +5,8 @@
  */
 package com.mycompany.Farmerama;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Tolis MacNamli
@@ -13,6 +15,6 @@ public interface PhotoAlbumInterface {
    
     public void putInDb(String s,String user); 
     
-    public String getUserName();
+  public ArrayList<String> getPhoto(String userName);
     
 }

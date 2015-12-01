@@ -11,6 +11,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,17 +19,19 @@ import com.mongodb.Mongo;
  */
 public class PhotoAlbum implements PhotoAlbumInterface {
 
-    DB db;
+   DB db;
     DBCollection photo;
+    public String userName;
 
     public PhotoAlbum(String username) {
         Mongo mongo = new Mongo("localhost", 27017);
         db = mongo.getDB("album");
         photo = db.getCollection(username);
         //initComponents();
+        this.userName = username;
     }
-
     
+
     @Override
     public void putInDb(String s, String user) {
 
@@ -38,14 +41,30 @@ public class PhotoAlbum implements PhotoAlbumInterface {
         photo.insert(document);
 
     }
-    
+
     @Override
-    public String getUserName() {
+    public ArrayList<String> getPhoto(String userName) {
         BasicDBObject searchQuery = new BasicDBObject();
-        searchQuery.put("userName", "tolis");
-        DBCursor cursor = photo.find(searchQuery);     
-        String uri = cursor.next().get("photoURL").toString();
-        return uri;
+        searchQuery.put("userName", userName);
+        DBCursor cursor = photo.find(searchQuery);
+        ArrayList<String> photos = new ArrayList<String>();
+        while (cursor.hasNext()) {
+            photos.add(cursor.next().get("photoURL").toString());
+        }
+        return photos;
     }
+
+    public String getPhoto() {
+        BasicDBObject searchQuery = new BasicDBObject();
+        searchQuery.put("userName", userName);
+        DBCursor cursor = photo.find(searchQuery);
+        String photos = cursor.next().get("photoURL").toString();
+        while (cursor.hasNext()) {
+         photos = cursor.next().get("photoURL").toString();
+             return photos;
+        }
+        return photos;
+    }
+
 
 }

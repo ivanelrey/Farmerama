@@ -37,7 +37,7 @@
         
         <center>
             <form action="searchServlet" method="POST">
-                <input type="text" name="search" />
+                <input type="text" name="search" placeholder="Search Friends" />
                 <input type="submit" value="search" />
             </form>
         <form action="seeOtherServlet" method="POST">

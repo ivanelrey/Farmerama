@@ -1,13 +1,13 @@
-package com.mycompany.Farmerama;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.mycompany.Farmerama;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,10 +17,10 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Gomesito
+ * @author Tolis MacNamli
  */
-@WebServlet(urlPatterns = {"/seeOtherServlet"})
-public class seeOtherServlet extends HttpServlet {
+@WebServlet(name = "PhotoAlbumServlet", urlPatterns = {"/PhotoAlbumServlet"})
+public class PhotoAlbumServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,7 +33,9 @@ public class seeOtherServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");       
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -63,12 +65,17 @@ public class seeOtherServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String otherUser = request.getParameter("otheruser");
-        HttpSession session1 = request.getSession();
-        session1.setAttribute("otherUser", otherUser);
-        response.sendRedirect("otherHomePage.jsp");
+        String user = request.getParameter("photo");
+        PhotoAlbum pa = new PhotoAlbum(user);
+        ArrayList<String> photo = pa.getPhoto(user);
         
-       
+        HttpSession session = request.getSession();
+        session.setAttribute("photo", photo);
+        
+        response.sendRedirect("photoAlbum.jsp");
+        
+         response.setContentType("text/html;charset=UTF-8");
+
         processRequest(request, response);
     }
 
