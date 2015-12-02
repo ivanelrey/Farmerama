@@ -8,6 +8,12 @@
         <link rel="stylesheet" type="text/css" href="cssStyles/indexStyle.css">
         <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
         <title>FARMERAMA</title>
+         <script type = "text/javascript" >
+    history.pushState(null, null, 'index.jsp');
+    window.addEventListener('popstate', function(event) {
+    history.pushState(null, null, 'index.jsp');
+    });
+    </script>
         <script type = "text/javascript">
           function displayNextImage() {
               x = (x === images.length - 1) ? 0 : x + 1;
