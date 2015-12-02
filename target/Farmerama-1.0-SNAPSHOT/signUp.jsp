@@ -45,6 +45,7 @@ Password:\n\
                     -Must contain at least one LOWERCASE character.\n\
                     -Must contain at least one UPPERCASE character.\n\
                     -Between 6 and 14 characters.')">
+                <h4>${message}</h4>
             </form>
             
             <p id="msg"></p>
