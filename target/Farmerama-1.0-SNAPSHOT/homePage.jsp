@@ -25,7 +25,12 @@
         %>
         
         
-        <div class="fixed"><input type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" /> <input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
+        <div class="fixed"><input type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" />
+            <form method="post" action="EndSessionServlet">
+                <input class="myButton" type="submit" value="Log Out" />
+            </form>
+        </div>
+        
         <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
         </div>
         <div id="information">
