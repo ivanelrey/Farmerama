@@ -6,7 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="cssStyles/indexStyle.css">
-        <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
+        <link rel="icon" type="image" href="images/grass.jpg" />
         <title>FARMERAMA</title>
          <script type = "text/javascript" >
     history.pushState(null, null, 'index.jsp');
@@ -31,21 +31,16 @@
           images[3] = "images/farmeramaSLogo.jpg";
       </script>
     </head>
-    <body  onload = "startTimer()">
+   <body  onload = "startTimer()" link=#142170>
         
-        <div class="headerx">
-             
-        </div>
+        <div class="headerx"></div>
         
-        <div class="header">
-            
-        </div>
+        <div class="header"></div>
         
-        <div id="img1" class="header"><img src="images/farmeramaSLogo.jpg"/>
-        
-        </div>
+        <div id="img1" class="header"><a href="index.jsp"><img src="images/farmeramaSLogo.jpg"/></a></div>
         
         <div class="bodyx">
+            
             <div id="intro" class="bodyx">Farmerama helps you connect and share 
                 with rural society.
             </div>
@@ -55,13 +50,10 @@
                 <a href="informations.jsp" STYLE="text-decoration: none">Informations</a>
             </div>
            
-           
         </div>
         
          <img id="img2" STYLE="margin-top: 300px; margin-left: 100px" src="images/Farmer_of_Bangladesh.jpg"/>
-        
-        
-       
+
         <div id="footer">Project Farmerama is being developed by 
             <a href="https://www.facebook.com/mixalis.kwnstantinou?fref=ts">Michalis</a>
             <a href="https://www.facebook.com/tolis.toliss?fref=ts">Tolis</a>

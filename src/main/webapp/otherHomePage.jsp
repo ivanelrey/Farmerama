@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="cssStyles/homePageStyle.css">
-       <link rel="icon" type="image/gif" href="images/animTitleMain.gif" />
+        <link rel="icon" type="image" href="images/grass.jpg" />
         <title>Welcome to Farmerama</title>
     </head>
     <body>
