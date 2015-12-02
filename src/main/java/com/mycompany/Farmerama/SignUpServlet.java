@@ -7,6 +7,7 @@ package com.mycompany.Farmerama;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "SignUpServlet", urlPatterns = {"/SignUpServlet"})
 public class SignUpServlet extends HttpServlet {
-
+    private String address;
+    String message="Invalid Input.";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -65,16 +67,34 @@ public class SignUpServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         SignUpVal user = new SignUpVal();
-        //user.setUsrName(request.getParameter("un"));
-        //user.setPWord(request.getParameter("pw"));
-        user.setDoc(request.getParameter("un"), 
+        if(!user.validExistence(request.getParameter("un")))
+        {
+            address = "SUErrorPage.jsp";
+        }
+        else if(user.validateInput(request.getParameter("un"), 
+                request.getParameter("pw"), 
+                request.getParameter("pw1"),
+                request.getParameter("eMail"),
+                request.getParameter("sex"), 
+                request.getParameter("section")))
+        {
+            user.setDoc(request.getParameter("un"), 
                 request.getParameter("pw"), 
                 request.getParameter("eMail"),
                 request.getParameter("sex"), 
                 request.getParameter("section"));
+            address = "index.jsp";
+        }
+        else
+        {
+            address = "signUp.jsp";
+            request.setAttribute("message", message);
+        }
         
-        response.sendRedirect("index.jsp");
-       
+        
+        //response.sendRedirect("index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+        dispatcher.forward(request, response);
         processRequest(request, response);
     }
 
