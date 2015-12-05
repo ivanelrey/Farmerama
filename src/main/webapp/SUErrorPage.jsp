@@ -14,9 +14,11 @@
     </head>
     <body>
         <center>
+            <br><br><br>
             <h1>Sorry!!</h1>
             <p>The Username you have entered already exists.</p>
-            <p>Please go back to retry!</p>
+            <p>Please go back to retry!</p><br>
+            <img src="images/mparmpadias.png" width="218" height="231" alt="mparmpadias"/>
         </center>
     </body>
 </html>

@@ -21,14 +21,17 @@
           }
 
           function startTimer() {
-              setInterval(displayNextImage, 3000);
+              setInterval(displayNextImage, 2500);
           }
 
           var images = [], x = -1;
-          images[0] = "images/Farmer_of_Bangladesh.jpg";
-          images[1] = "images/farmeramaLogo.jpg";
-          images[2] = "images/Farmer_of_Bangladesh.jpg";
-          images[3] = "images/farmeramaSLogo.jpg";
+          images[0] = "images/bw7.jpg";
+          images[1] = "images/bw1.jpg";
+          images[2] = "images/bw2.jpg";
+          images[3] = "images/bw3.jpg";
+          images[4] = "images/bw4.jpg";
+          images[5] = "images/bw5.jpg";
+          images[6] = "images/bw6.jpg";
       </script>
     </head>
    <body  onload = "startTimer()" link=#142170>
@@ -52,7 +55,7 @@
            
         </div>
         
-         <img id="img2" STYLE="margin-top: 300px; margin-left: 100px" src="images/Farmer_of_Bangladesh.jpg"/>
+         <img id="img2" STYLE="margin-top: 300px; margin-left: 150px" src="images/bw.jpg"/>
 
         <div id="footer">Project Farmerama is being developed by 
             <a href="https://www.facebook.com/mixalis.kwnstantinou?fref=ts">Michalis</a>

@@ -8,8 +8,9 @@ and open the template in the editor.
     Author     : Nena
 */
 body {
-    background: linear-gradient(to bottom right, white, #bcbdc4);
+    background-image: url("../images/tree.jpg");
     height: 700px;
+    position: fixed; 
 }
 
 .headerx{
@@ -57,7 +58,8 @@ body {
     height: 60px;
 }
 
-#img1{left:100px;
+#img1{
+    left:100px;
     height: 50px;
     width: 110px;
     top: 20px;
@@ -85,5 +87,5 @@ body {
     top: 500px;
     left: 200px;
     height: 250px;
-    width: 500px;
+    width: 450px;
 }
