@@ -42,7 +42,8 @@
         </table>
 
         <div class="fixed"> <input class="myButton" type="submit" value="Home Page" name="hp" onclick="window.location = 'homePage.jsp';">
-            <input type="button" value="Upload From File" name="Upload" onclick="window.location='UploadFile.jsp';" />
+            <br> <input type="button" value="Upload From File" name="Upload" onclick="window.location='UploadFile.jsp';" />
+            <br>  <input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">
         </div>
 
     </body>
