@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Δεκ 2015, 12:46:46 πμ
+    Author     : Gomesito
+*/
+body{
+    position: absolute;
+}
+textArea{
+    width: 600px;
+    height: 220px;
+    border: 3px solid #cccccc;
+    padding: 2px;
+    font-family: Tahoma, sans-serif;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+}
+#textar{
+    position: fixed;
+    margin-top:  15%;
+    margin-left: 30%;
+    width: 20%;
+    height: 30%;
+
+}

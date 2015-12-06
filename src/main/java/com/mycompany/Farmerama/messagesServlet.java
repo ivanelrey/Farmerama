@@ -12,14 +12,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author MICHALIS
+ * @author Gomesito
  */
-@WebServlet(name = "contactWithOtherServlet", urlPatterns = {"/contactWithOtherServlet"})
-public class contactWithOtherServlet extends HttpServlet {
+@WebServlet(name = "messagesServlet", urlPatterns = {"/messagesServlet"})
+public class messagesServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,7 +32,6 @@ public class contactWithOtherServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -62,33 +60,16 @@ public class contactWithOtherServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String myName = request.getParameter("myName");
+        String message = request.getParameter("message");
+        String collectionName = request.getParameter("collectionName");
         
-        
-        
-        String thisUserName = request.getParameter("myname");
-        String otherUserName = request.getParameter("otheruser");
-        String collectionName; 
-        
-        contactWithOther collectionCheck = new contactWithOther();
-        
-        if(collectionCheck.checkIfCollectionExists(thisUserName+"with"+otherUserName)){
-            collectionName=thisUserName+"with"+otherUserName;
-        }
-        else if(collectionCheck.checkIfCollectionExists(otherUserName+"with"+thisUserName)){
-            collectionName=otherUserName+"with"+thisUserName;
-        }
-        else{   
-        contactWithOther createcollection = new contactWithOther(thisUserName,otherUserName);
-        createcollection.startChat(thisUserName,otherUserName);
-        collectionName = createcollection.getCollectionName();
+        if(!message.isEmpty()){
+            contactWithOther send = new contactWithOther(collectionName);
+            send.putInDb(myName,message);
+           response.sendRedirect("messagesPage.jsp");
         }
         
-        HttpSession session = request.getSession();
-        session.removeAttribute(collectionName);
-        session.setAttribute("collectionName", collectionName);
-         session.setAttribute("otherUserName", otherUserName);
-        response.sendRedirect("messagesPage.jsp");
-       
     }
 
     /**
