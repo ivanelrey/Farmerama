@@ -59,7 +59,7 @@
         </form>
         </center>
         <div id="nav">
-            <br><br><input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">
+            <br><br>
             <br><br><input class="myButton" type="submit" value="messages" name="settings" onclick="window.location = 'messagesPage.jsp';" >
             <br><br><input class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
             <br><br><span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;">
