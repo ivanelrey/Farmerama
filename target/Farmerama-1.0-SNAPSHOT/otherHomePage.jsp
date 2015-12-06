@@ -17,7 +17,8 @@
     <body>
         
         
-        <div class="fixed"><input type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" /> <input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
+        <div class="fixed"><input type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" /> 
+        <input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
         <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
         </div>
         <div id="information">
@@ -26,9 +27,9 @@
             <br>COUNTRY:
             <br>CITY:
         </div>
-        //
-        <input type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
-        //
+        
+        <input class="myButton" type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
+        
         <div id="nav">
         </div>
     </body>

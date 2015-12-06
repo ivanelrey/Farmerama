@@ -4,25 +4,90 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 21, 2015, 7:16:13 PM
-    Author     : MICHALIS
+    Created on : Dec 6, 2015, 5:38:52 PM
+    Author     : Nena
 */
-body{
-    margin-top: 0;
-    margin-left: 0;
-    background: rgba(72,214,36,1);
-    background: -moz-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(72,214,36,1)), color-stop(100%, rgba(29,143,0,0.95)));
-    background: -webkit-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
-    background: -o-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
-    background: -ms-linear-gradient(left, rgba(72,214,36,1) 0%, rgba(29,143,0,0.95) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48d624', endColorstr='#1d8f00', GradientType=1 );
+.headerx{
+    position: fixed;
+    width: 100%;
+    height: 73px;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 7;
+    font-family: verdana;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 }
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 73px;
+    background: #000040;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 7;
+    font-family: verdana;
+}
+
+#img1{
+    left:100px;
+    top: 0px;
+}
+
+.bodyx{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 170px;
+}
+
+.header1{
+    left: 48%;
+    top: 2%;
+    font-size:140%;
+    font-family: Impact, Charcoal, sans-serif;
+    position: fixed;
+    z-index: 7;
+}
+
+div.myButtonSearch input {
+    background:url("../images/search.png");
+    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    z-index: 7;
+    top: 18px;
+    left: 560px;
+    position: fixed;
+}
+
+div.myButtonCheck input {
+    background:url("../images/check.png");
+    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    z-index: 7;
+    top: 18px;
+    left: 750px;
+    position: fixed;
+}
+
+a.Bubble { 
+    position: relative; 
+    text-decoration: none; 
+    }
+
+    
 #profileImageStyle{
     margin-top: 5px;
     margin-left: 5px;
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 350px;
     border-radius: 100%;
     border: 1px;
     text-align: left;
@@ -37,10 +102,15 @@ body{
 #information{
     position:absolute;
     top: 50px;
-    left: 280px;
+    left: 430px;
     -khtml-user-select: none;
     -moz-user-select: none;
     cursor: default;
+    font-family: verdana;
+    font-size: 30px;
+    color: #142170;
+    height: 75px;
+    width: 550px;
 }
 div.fixed {
     position:absolute;
@@ -53,8 +123,8 @@ div.fixed {
     height:100%;
     width:240px;
     text-align: center;
-    float:left;
-    padding:5px;	      
+    float:right;
+    padding:5px;
 }
 #profileImg {
     background-color:transparent;
@@ -70,22 +140,10 @@ div.fixed {
 }
 
 .myButton {
-	-moz-box-shadow: 0px 10px 14px -7px #276873;
-	-webkit-box-shadow: 0px 10px 14px -7px #276873;
-	box-shadow: 0px 10px 14px -7px #276873;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
-	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
-	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
-	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
-	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
-	background-color:#599bb3;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:20px;
+	background-color:#000040;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:dodgerblue;
 	font-family:Arial;
 	font-size:22px;
 	font-weight:bold;
@@ -93,8 +151,9 @@ div.fixed {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #3d768a;
        -webkit-box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
--moz-box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
-box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
+        -moz-box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
+        box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
+        border:none;
 }
 .myButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
@@ -108,5 +167,44 @@ box-shadow: 0px 0px 157px 16px rgba(0,0,0,0.51);
 .myButton:active {
 	position:static;
 	top:1px;
+}
+
+.Logout{
+    position: fixed;
+    width: 100px;
+    height: 70px;
+    background: #000040;
+    top: 0;
+    left: 90%;
+    border: none;
+    color: white;
+    z-index: 7;
+    font-family: Impact, Charcoal, sans-serif;;
+    font-size: 140%;
+    cursor: pointer;
+}
+
+.bottom{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: #000040;
+    top: 92%;
+    left: 0;
+    color:dodgerblue;
+    z-index: 7;
+    font-family: verdana;
+}
+
+.bottomx{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 92%;
+    left: 0;
+    color: dodgerblue;
+    z-index: 7;
+    font-family: verdana;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 }
 

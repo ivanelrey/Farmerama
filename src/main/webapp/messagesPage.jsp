@@ -48,7 +48,6 @@
                         ArrayList<String> names = conversation.getNames();
                         ArrayList<String> messages = conversation.getMessages();
                         if (names != null) {
-
                 %>
                 </div>
                 <div id="textar">
@@ -70,7 +69,6 @@
                     </form>
             
         </div>
-
 
 
     </body>
