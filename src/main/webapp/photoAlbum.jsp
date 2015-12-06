@@ -42,8 +42,8 @@
         </table>
 
         <div class="fixed"> <input class="myButton" type="submit" value="Home Page" name="hp" onclick="window.location = 'homePage.jsp';">
+            <input type="button" value="Upload From File" name="Upload" onclick="window.location='UploadFile.jsp';" />
         </div>
-
 
     </body>
 </html>
