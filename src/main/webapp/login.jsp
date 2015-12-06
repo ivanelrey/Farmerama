@@ -10,8 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login | Farmerama</title>
-        <link rel="icon" type="image" href="images/grass.jpg" />
+        <link rel="icon" type="image" href="images/grass.jpg" />        
         <link rel="stylesheet" type = "text/css" href="cssStyles/loginstyle.css"><!--to css valto ston fakelo cssStyles kai to path tha einia "cssStyles/login.css-->
+        <script type="text/javascript" src="javaScripts/capslock.js"></script>
     </head>
     <body link="white">
         
