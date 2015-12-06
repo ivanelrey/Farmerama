@@ -59,7 +59,6 @@
         </form>
         </center>
         <div id="nav">
-            <br><input class="myButton" type="submit" value="Upload from file" name="uploadFromFil" onclick="window.location = 'UploadFile.jsp';">
             <br><br><input class="myButton" type="submit" value="Take Snapshot" name="takeSnapshot" onclick="window.location = 'Camera.jsp';">
             <br><br><input class="myButton" type="submit" value="messages" name="settings" onclick="window.location = 'messagesPage.jsp';" >
             <br><br><input class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
