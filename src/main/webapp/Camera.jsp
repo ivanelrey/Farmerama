@@ -10,9 +10,13 @@
         <link rel="icon" type="image" href="images/grass.jpg" />
     </head>
 
-    <body>
+    <body >
 
         <script src="javaScripts/cameraScript.js"></script> 
+        <script src="javaScripts/BlueSnap.js"></script> 
+         <div>Snap Foto ! Then Press 1 or 2 times to Change Colour <br>
+         <input type="submit" value="Go Blue" id="snapBlue" name="snapBlue" />
+         </div>
         <center>
             <video id="video" class="myVideo" width="320" height="240" autoplay=""></video>
             <br>
@@ -29,32 +33,27 @@
                 <input type="text" id="skata" name="name" /> 
                 <input type="hidden" name="userName" value=${sessionScope.name} >
                 <a id="upload"  onClick="uploadCanvas('canvas')" class="upButton upButton-primary upButtonH-primary" >Upload to Album</a>
-                <input type="submit" />
+                <input type="submit" value="Confirm" class="upButton upButton-primary upButtonH-primary"/>
                 <img src="images/upload1.png" height="35" width="35"/>
             </p>
             </form>
         </center> 
+               
 
-        
-        
-        
         <script>
             function downloadCanvas(link, canvas, filename) {
                 link.href = document.getElementById(canvas).toDataURL();
                 link.download = filename;
-
             }
             document.getElementById('download').addEventListener('click', function () {
                 downloadCanvas(this, 'canvas', 'Snap.png');
             }, false);
-
           
             document.getElementById('upload').addEventListener('click', function () {
                 uploadCanvas( this, 'canvas', 'Snap.png');
             }, false);
-
+            
             function uploadCanvas(canvas) {
-
                 var x = document.getElementById(canvas).toDataURL().toString();
                 document.getElementById("skata").value = x;
                 

@@ -24,7 +24,7 @@
             <textarea  placeholder="Type your message"></textarea>
             <div class="chat-status" >Status:<span>idle</span></div>
         </div>
-        <script src="http://46.177.28.150:8080/socket.io/socket.io.js"></script>
+        <script src="http://79.167.137.193:8080/socket.io/socket.io.js"></script>
         <script>
             (function () {
                 var getNode = function (s) {
@@ -50,7 +50,7 @@
 
 
                 try {
-                    var socket = io.connect('http://46.177.28.150:8080');
+                    var socket = io.connect('http://79.167.137.193:8080');
                 } catch (e) {
 
                 }
