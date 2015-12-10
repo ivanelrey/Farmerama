@@ -7,6 +7,7 @@
 			// Grab elements, create settings, etc.
 			var canvas = document.getElementById("canvas"),
 				context = canvas.getContext("2d"),
+                                
 				video = document.getElementById("video"),
 				videoObj = { "video": true },
 				errBack = function(error) {
@@ -34,7 +35,7 @@
 			// trigger gia lipsi fotografias
 			document.getElementById("snap").addEventListener("click", function() {
 				context.drawImage(video, 0, 0, 320, 240); 
-                                context.drawImage(video, 0, 0, 320, 240); 
+                                
                                 context.font = " 10px Comic Sans MS";
                                 context.fillStyle = "gray";
                                 context.globalAlpha = 1.0;
@@ -42,8 +43,12 @@
                                 context.shadowOffsetX = 2;
                                 context.shadowOffsetY = 2;
                                 context.shadowBlur = 2;
-
+                              
+                                context.drawImage(video, 0,0, 320, 240);
                                 context.fillText("Farmerama",260,235);
+                                
+                                
+                                
                         });           
                         
                         
