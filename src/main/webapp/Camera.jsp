@@ -14,8 +14,12 @@
 
         <script src="javaScripts/cameraScript.js"></script> 
         <script src="javaScripts/BlueSnap.js"></script> 
+        <script src="javaScripts/TomatoSnap.js"></script>
+        <script src="javaScripts/PetrolSnap.js"></script>
          <div>Snap Foto ! Then Press 1 or 2 times to Change Colour <br>
          <input type="submit" value="Go Blue" id="snapBlue" name="snapBlue" />
+         <input type="submit" value="Go Tomato" id="snapTomato" name="snapTomato" />
+         <input type="submit" value="Go Petrol" id="snapPetrol" name="snapPetrol" />
          </div>
         <center>
             <video id="video" class="myVideo" width="320" height="240" autoplay=""></video>
