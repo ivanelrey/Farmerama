@@ -4,6 +4,7 @@
     Author     : Gomesito
 --%>
 
+<%@page import="static com.mycompany.Farmerama.secondsServlet.a"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -27,6 +28,14 @@
             <br>COUNTRY:
             <br>CITY:
         </div>
+            
+             <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
+
+               <script> setTimeout('window.location.reload();', 8000); </script>
+               <% a=""; %>
+               
+                    <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
+        
         
         <input class="myButton" type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
         

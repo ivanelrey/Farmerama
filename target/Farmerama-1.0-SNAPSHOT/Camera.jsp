@@ -21,16 +21,18 @@
          <input type="submit" value="Go Tomato" id="snapTomato" name="snapTomato" />
          <input type="submit" value="Go Petrol" id="snapPetrol" name="snapPetrol" />
          </div>
+        <input class="myButton" type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
         <center>
             <video id="video" class="myVideo" width="320" height="240" autoplay=""></video>
             <br>
             <p>
-                <button id="snap"  class="snapButton snapButton-primary snapButton-primary:hover">Snap Photo</button>
+                <button id="snap"  class="snapButton snapButton-primary snapButton-primary:hover">Snap Photo</button> 
+                 
                 <img src="images/camera1.png" height="35" width="35"/>
             </p> 
             <br> 
             <canvas id="canvas" class="myCanvas" width="320" height="240"></canvas>
-            <br>
+     
             <form method="post" action="photoServlet">
                <p>
                 <a id="download" onClick="downloadCanvas(this, 'canvas', 'Snap.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
@@ -41,6 +43,15 @@
                 <img src="images/upload1.png" height="35" width="35"/>
             </p>
             </form>
+                <form method="post" action="secondsServlet">
+            
+                <input type="text" id="skata8" name="urlImg" /> 
+                <input type="hidden" name="userName" value=${sessionScope.name} >
+                <a id="upload"  onClick="uploadCanvasSec('canvas')"  class="upButton upButton-primary upButtonH-primary" >Snap Photo for 8 seconds</a>
+                <input type="submit" value="Go"  class="upButton upButton-primary upButtonH-primary"/>
+                <img src="images/upload1.png" height="35" width="35"/>
+            </form>
+                
         </center> 
                
 
@@ -60,6 +71,12 @@
             function uploadCanvas(canvas) {
                 var x = document.getElementById(canvas).toDataURL().toString();
                 document.getElementById("skata").value = x;
+                
+           }
+           
+           function uploadCanvasSec(canvas) {
+                var x = document.getElementById(canvas).toDataURL().toString();
+                document.getElementById("skata8").value = x;
                 
            }
 
