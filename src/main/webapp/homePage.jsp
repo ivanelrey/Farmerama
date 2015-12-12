@@ -4,6 +4,7 @@
     Author     : MICHALIS
 --%>
 
+<%@page import="static com.mycompany.Farmerama.secondsServlet.a"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.mycompany.Farmerama.getAllAccounts"%>
 <%@page import="com.mycompany.Farmerama.LoginCheckUserToDb"%>
@@ -89,6 +90,13 @@
             <br>Country:
             <br>City:
         </div>
+            
+            <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
+
+               <script> setTimeout('window.location.reload();', 8000); </script>
+               <% a=""; %>
+               
+                    <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
         
         <div id="nav">
             <br><span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;">
