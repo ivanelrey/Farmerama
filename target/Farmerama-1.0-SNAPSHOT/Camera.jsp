@@ -16,10 +16,12 @@
         <script src="javaScripts/BlueSnap.js"></script> 
         <script src="javaScripts/TomatoSnap.js"></script>
         <script src="javaScripts/PetrolSnap.js"></script>
+        <script src="javaScripts/NegativeSnap.js"></script>
          <div>Snap Foto ! Then Press 1 or 2 times to Change Colour <br>
          <input type="submit" value="Go Blue" id="snapBlue" name="snapBlue" />
          <input type="submit" value="Go Tomato" id="snapTomato" name="snapTomato" />
          <input type="submit" value="Go Petrol" id="snapPetrol" name="snapPetrol" />
+         <input type="submit" value="Go Negative" id="snapNegative" name="snapNegative" />
          </div>
         <input class="myButton" type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
         <center>
