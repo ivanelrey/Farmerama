@@ -1,3 +1,5 @@
+/* global object */
+
 function validate(form)
 {   
     if(form.pw.value === form.pw1.value) 
@@ -18,4 +20,5 @@ function validate(form)
 
     alert("You entered a valid password: " + form.pw.value + "\nPlease take note of your password\nfor maximum security.");
     return true;
+    
 }
