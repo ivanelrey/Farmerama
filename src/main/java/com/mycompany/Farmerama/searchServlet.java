@@ -9,6 +9,7 @@ import com.mycompany.Farmerama.getAllAccounts;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,8 +69,10 @@ public class searchServlet extends HttpServlet {
         String search = request.getParameter("search");
         getAllAccounts searchedAccounts =new getAllAccounts();
         ArrayList<String> allFoundUsers = searchedAccounts.getSearchedAccounts(search);
+         HashMap<String,String> allFoundUsersByNumber = searchedAccounts.getSearchedAccountsByNumber(search);
         HttpSession session1 = request.getSession();
         session1.setAttribute("allFoundUsers", allFoundUsers);
+        session1.setAttribute("allFoundUsersByNumber", allFoundUsersByNumber);
         response.sendRedirect("homePage.jsp");        
         processRequest(request, response);
     }

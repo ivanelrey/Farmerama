@@ -1,9 +1,10 @@
 <%-- 
     Document   : homePage
     Created on : Nov 21, 2015, 7:14:26 PM
-    Author     : MICHALIS
+    Author     : MICHALIS , Nena
 --%>
 
+<%@page import="java.util.HashMap"%>
 <%@page import="static com.mycompany.Farmerama.secondsServlet.a"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.mycompany.Farmerama.getAllAccounts"%>
@@ -59,14 +60,18 @@
         </form>
         
         <form action="seeOtherServlet" method="POST" style="left: 48%; top: 4%;position: fixed;z-index: 7">
-              <%  ArrayList<String> sessionVal = (ArrayList<String>) session.getAttribute("allFoundUsers");
-                 if(sessionVal!=null) {  %>
+              <%   ArrayList<String> sessionVal = (ArrayList<String>) session.getAttribute("allFoundUsers");
+                  HashMap<String,String> sessionVal1 = ( HashMap<String,String>) session.getAttribute("allFoundUsersByNumber");
+              if(sessionVal!=null) {  %>
                <select name="otheruser"  size="2">
-                   <%for (int i = 0; i <sessionVal.size(); i++) {%>
-                   
-                   
+                  <option ><%=sessionVal1.values() %> </option>
+                  
+                  <%for (int i = 0 ; i <sessionVal.size(); i++) {%>
                    <option ><%=sessionVal.get(i) %> </option>
+                   
                 <% } } %> 
+                
+                
                </select>
                <a href='#' class="Bubble" title="Check Profile">
                    <div class="myButtonCheck">
