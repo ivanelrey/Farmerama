@@ -82,7 +82,8 @@ public class SignUpServlet extends HttpServlet {
                 request.getParameter("pw"), 
                 request.getParameter("eMail"),
                 request.getParameter("sex"), 
-                request.getParameter("section"));
+                request.getParameter("section"),
+                request.getParameter("number"));
             address = "index.jsp";
         }
         else
@@ -90,6 +91,8 @@ public class SignUpServlet extends HttpServlet {
             address = "signUp.jsp";
             request.setAttribute("message", message);
         }
+        
+      
         
         
         //response.sendRedirect("index.jsp");

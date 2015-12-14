@@ -11,6 +11,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -49,5 +50,16 @@ public class getAllAccounts {
         allFoundUsers.add(cursor.next().get("user").toString());
         }
         return allFoundUsers;
+    }
+    public HashMap<String,String> getSearchedAccountsByNumber(String inputedS) {
+       HashMap<String,String> allFoundUsersByNumber = new  HashMap<String,String>();
+        BasicDBObject searchQuery = new BasicDBObject();
+        searchQuery.append("number",new BasicDBObject("$regex",inputedS));
+        DBCursor cursor = account.find(searchQuery);
+        while(cursor.hasNext())
+        {
+        allFoundUsersByNumber.put(cursor.next().get("number").toString(),cursor.curr().get("user").toString());
+        }
+        return allFoundUsersByNumber;
     }
 }

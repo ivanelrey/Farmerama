@@ -11,7 +11,7 @@ ument   : signUp
 <html>
     <head>
          <script type="text/javascript">
-            function val() {
+            function minLengthCheck() {
               
                 if (((form1.number.value).length < 10) && (form1.number.value).length > 0)
                 {
@@ -90,7 +90,7 @@ ument   : signUp
                         <option value="legumes-corn" id="pointer">Legumes and Corn</option>
                         <option value="beet" id="pointer">Beet</option>
                     </select>
-                    <br><br><input id="register" type="submit" onclick="return val();" value="Register"/>
+                    <br><br><input id="register" type="submit" onclick="return minLengthCheck();" value="Register"/>
                     <br><br><input class="infoImg" type="image" src="images/info_icon.png" width="35" height="35" onclick="alert
                                     ('Username:\n\
                     -First character NOT number.\n\

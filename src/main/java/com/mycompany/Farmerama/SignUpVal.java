@@ -20,6 +20,7 @@ public class SignUpVal implements SignUpInterface
     private String eMail;
     private String sex;
     private String section;
+    private String num;
     private String message="Invalid Input.";
     DBCollection account;
     DB db;
@@ -55,6 +56,10 @@ public class SignUpVal implements SignUpInterface
     {
         this.eMail = eMail;
     }
+     public void setNumber(String num)
+    {
+        this.num = num;
+    }
     
     public String getSex()
     {
@@ -79,6 +84,10 @@ public class SignUpVal implements SignUpInterface
     public String getEMail()
     {
         return eMail;
+    }
+     public String getNumber()
+    {
+        return num;
     }
     
     public boolean validateInput(String un, String pw, String pw1,
@@ -124,7 +133,7 @@ public class SignUpVal implements SignUpInterface
     }
 
     @Override
-    public void setDoc(String un, String pw, String email, String sex, String section) 
+    public void setDoc(String un, String pw, String email, String sex, String section, String num) 
     {
         BasicDBObject obj = new BasicDBObject();
         obj.put("user", un);
@@ -132,6 +141,7 @@ public class SignUpVal implements SignUpInterface
         obj.put("email", email);
         obj.put("sex", sex);
         obj.put("section", section);
+        obj.put("number",num);
         account.insert(obj);
     }
 }
