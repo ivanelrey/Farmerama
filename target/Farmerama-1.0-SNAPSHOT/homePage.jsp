@@ -22,9 +22,7 @@
     </head>
     <body link="white">
         
-        <%  LoginCheckUserToDb ch = new LoginCheckUserToDb();       
-            String user = ch.userName;
-        %>
+       
         
         <div class="headerx"></div>
         
@@ -52,6 +50,10 @@
         
         <div class="bottom" style="left: 540px">
         <input class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
+        </div>
+        
+        <div class="bottom" style="left: 540px">
+        <input class="myButton" type="submit" value="See Users on Map" name="map" onclick="window.location = 'Map.jsp';" >
         </div>
         
         <form action="searchServlet" method="POST">
@@ -87,7 +89,7 @@
             </form>
         </div>
         
-        <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
+        <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src=${sessionScope.profileImage} >
         </div>
         <div id="information" >
             Name: ${sessionScope.name}

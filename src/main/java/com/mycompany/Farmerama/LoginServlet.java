@@ -68,16 +68,21 @@ public class LoginServlet extends HttpServlet {
         
         String userName = request.getParameter("userName");
         String password = request.getParameter("passWord");
-        
+        String Lat = request.getParameter("map");
+        String Lng = request.getParameter("mapLng");
         LoginCheckUserToDb ch = new LoginCheckUserToDb();
         
         if(ch.checkUser(userName, password)){
         
+        Locations loc = new Locations(Lat,Lng);   
+            
         getAllAccounts accountDetails = new getAllAccounts();
         
         HttpSession session = request.getSession();
         session.setAttribute("name", userName);
         session.setAttribute("profileImage", accountDetails.getProfileImage(userName));
+        session.setAttribute("Lat", Lat);
+        session.setAttribute("Lng", Lng);
         response.sendRedirect("homePage.jsp");
         }
         else{
