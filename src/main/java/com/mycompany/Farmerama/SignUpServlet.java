@@ -72,19 +72,28 @@ public class SignUpServlet extends HttpServlet {
             address = "SUErrorPage.jsp";
         }
         else if(user.validateInput(request.getParameter("un"), 
-                request.getParameter("pw"), 
-                request.getParameter("pw1"),
-                request.getParameter("eMail"),
-                request.getParameter("sex"), 
-                request.getParameter("section")))
+                request.getParameter("pw")))
         {
+            if(request.getParameter("sex").toString().equals("Female")){
             user.setDoc(request.getParameter("un"), 
                 request.getParameter("pw"), 
                 request.getParameter("eMail"),
                 request.getParameter("sex"), 
                 request.getParameter("section"),
+                request.getParameter("ProfileImageFemale"),
                 request.getParameter("number"));
             address = "index.jsp";
+            }
+            else{
+            user.setDoc(request.getParameter("un"), 
+                request.getParameter("pw"), 
+                request.getParameter("eMail"),
+                request.getParameter("sex"), 
+                request.getParameter("section"),
+                request.getParameter("ProfileImageMale"),
+                request.getParameter("number"));
+            address = "index.jsp";
+            }
         }
         else
         {

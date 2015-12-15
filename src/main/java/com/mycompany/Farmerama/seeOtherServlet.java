@@ -64,8 +64,13 @@ public class seeOtherServlet extends HttpServlet {
             throws ServletException, IOException {
         
         String otherUser = request.getParameter("otheruser");
+        
+        getAllAccounts otherAccountInformation  = new getAllAccounts();
+        
         HttpSession session1 = request.getSession();
         session1.setAttribute("otherUser", otherUser);
+        session1.setAttribute("otherUserProfileImage", otherAccountInformation.getProfileImage(otherUser));
+        
         response.sendRedirect("otherHomePage.jsp");
         
        

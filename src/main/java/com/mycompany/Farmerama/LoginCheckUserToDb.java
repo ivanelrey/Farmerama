@@ -21,7 +21,7 @@ public class LoginCheckUserToDb extends HttpServlet {
     
     DB db;
     DBCollection account;
-    public String userName;
+        String userName;
     
     public LoginCheckUserToDb() {
         Mongo mongo = new Mongo("localhost", 27017);
@@ -31,16 +31,22 @@ public class LoginCheckUserToDb extends HttpServlet {
     }   
     
     
-    public void checkUser(String user, String pass) {
+    public boolean checkUser(String user, String pass) {
        
+        userName="";
         BasicDBObject searchQuery = new BasicDBObject();
         searchQuery.put("user", user);
         searchQuery.put("password",pass);
         DBCursor cursor = account.find(searchQuery);
-        userName = cursor.next().get("user").toString();
+        while(cursor.hasNext())
+        {
+            userName = cursor.next().get("user").toString();
+        }
         
-   
-      
+        if(user.equals(userName))
+            return true;
+        else 
+            return false;
     }
 
     

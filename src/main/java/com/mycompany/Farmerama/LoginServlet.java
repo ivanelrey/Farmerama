@@ -70,14 +70,19 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("passWord");
         
         LoginCheckUserToDb ch = new LoginCheckUserToDb();
-        ch.checkUser(userName, password);
+        
+        if(ch.checkUser(userName, password)){
+        
+        getAllAccounts accountDetails = new getAllAccounts();
         
         HttpSession session = request.getSession();
         session.setAttribute("name", userName);
-        
+        session.setAttribute("profileImage", accountDetails.getProfileImage(userName));
         response.sendRedirect("homePage.jsp");
-        
-        //processRequest(request, response);
+        }
+        else{
+            response.sendRedirect("login.jsp");       
+        }
     }
 
     /**
