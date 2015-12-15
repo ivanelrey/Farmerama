@@ -14,5 +14,5 @@ public interface SignUpInterface
 {
     public void getDoc();
     public void setDoc(String un, String pw, String email, 
-            String sex, String section, String num);
+            String sex, String section,String profileImage, String num);
 }

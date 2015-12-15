@@ -22,9 +22,7 @@
     </head>
     <body link="white">
         
-        <%  LoginCheckUserToDb ch = new LoginCheckUserToDb();       
-            String user = ch.userName;
-        %>
+       
         
         <div class="headerx"></div>
         
@@ -87,7 +85,7 @@
             </form>
         </div>
         
-        <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src="images/profileImage.jpg" >
+        <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src=${sessionScope.profileImage} >
         </div>
         <div id="information" >
             Name: ${sessionScope.name}

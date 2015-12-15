@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class SignUpVal implements SignUpInterface
 {
+            
     private String usrName;
     private String pWord;
     private String pWord1;
@@ -90,8 +91,7 @@ public class SignUpVal implements SignUpInterface
         return num;
     }
     
-    public boolean validateInput(String un, String pw, String pw1,
-            String email, String sex, String section)
+    public boolean validateInput(String un, String pw)
     {
         boolean isAtLeast   = pw.length() < 6 || pw.length() > 14;
         boolean hasRestr   = !pw.matches("[A-Za-z0-9]*");
@@ -133,7 +133,7 @@ public class SignUpVal implements SignUpInterface
     }
 
     @Override
-    public void setDoc(String un, String pw, String email, String sex, String section, String num) 
+    public void setDoc(String un, String pw, String email, String sex, String section,String profileImage, String num) 
     {
         BasicDBObject obj = new BasicDBObject();
         obj.put("user", un);
@@ -141,6 +141,7 @@ public class SignUpVal implements SignUpInterface
         obj.put("email", email);
         obj.put("sex", sex);
         obj.put("section", section);
+        obj.put("profileImage", profileImage);
         obj.put("number",num);
         account.insert(obj);
     }

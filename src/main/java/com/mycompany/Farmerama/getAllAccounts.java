@@ -30,7 +30,19 @@ public class getAllAccounts {
         
     }   
     
-    
+    public String getProfileImage(String user){
+        String profileImage ="";
+        BasicDBObject searchQuery = new BasicDBObject();
+        searchQuery.append("user",user);
+        DBCursor cursor = account.find(searchQuery);
+        while(cursor.hasNext())
+        {
+        profileImage = cursor.next().get("profileImage").toString();
+        }
+       
+        return profileImage;
+        
+    }
     public ArrayList<String> getAccounts() {
         ArrayList<String> allUsers = new  ArrayList<String>();
         DBCursor cursor = account.find();

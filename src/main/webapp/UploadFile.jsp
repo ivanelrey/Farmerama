@@ -48,7 +48,7 @@
                     
                     console.log('wdthHghtRatio: ' + wdthHghtRatio);
                     
-                    if (Number(picWidth) > 400) {
+                    if (Number(picWidth) > 10) {
                         var newHeight = Math.round(Number(400) * wdthHghtRatio);
                     } else {
                         return false;
