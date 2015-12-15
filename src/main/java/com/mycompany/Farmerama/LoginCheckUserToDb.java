@@ -26,10 +26,8 @@ public class LoginCheckUserToDb extends HttpServlet {
     public LoginCheckUserToDb() {
         Mongo mongo = new Mongo("localhost", 27017);
         db = mongo.getDB("accounts");
-        account = db.getCollection("account");
-        
+        account = db.getCollection("account");  
     }   
-    
     
     public boolean checkUser(String user, String pass) {
        

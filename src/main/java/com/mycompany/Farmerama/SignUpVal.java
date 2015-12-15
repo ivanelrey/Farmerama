@@ -33,64 +33,6 @@ public class SignUpVal implements SignUpInterface
         account = db.getCollection("account");
     }
     
-    public void setSection(String section)
-    {
-        this.section = section;
-    }
-    public void setSex(String sex)
-    {
-        this.sex = sex;
-    }
-    public void setUsrName(String usrName)
-    {
-        this.usrName = usrName;
-    }
-    public void setPWord(String pWord)
-    {
-        this.pWord = pWord;
-    }
-    public void setPWord1(String pWord1)
-    {
-        this.pWord1 = pWord1;
-    }
-    public void setEMail(String eMail)
-    {
-        this.eMail = eMail;
-    }
-     public void setNumber(String num)
-    {
-        this.num = num;
-    }
-    
-    public String getSex()
-    {
-        return sex;
-    }
-    public String getSection()
-    {
-        return section;
-    }
-    public String getUsrName()
-    {
-        return usrName;
-    }
-    public String getPWord()
-    {
-        return pWord;
-    }
-    public String getPWord1()
-    {
-        return pWord1;
-    }
-    public String getEMail()
-    {
-        return eMail;
-    }
-     public String getNumber()
-    {
-        return num;
-    }
-    
     public boolean validateInput(String un, String pw)
     {
         boolean isAtLeast   = pw.length() < 6 || pw.length() > 14;
