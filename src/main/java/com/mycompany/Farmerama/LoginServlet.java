@@ -70,11 +70,12 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("passWord");
         String Lat = request.getParameter("map");
         String Lng = request.getParameter("mapLng");
+        
         LoginCheckUserToDb ch = new LoginCheckUserToDb();
         
         if(ch.checkUser(userName, password)){
         
-        Locations loc = new Locations(Lat,Lng);   
+        Locations loc = new Locations(userName,Lat,Lng);   
             
         getAllAccounts accountDetails = new getAllAccounts();
         

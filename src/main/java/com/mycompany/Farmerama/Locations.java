@@ -13,13 +13,18 @@ import java.util.ArrayList;
  */
 public class Locations {
     
-    public static ArrayList<String> LatA = new ArrayList<String>();
-    public static ArrayList<String> LngA = new ArrayList<String>();
+    public static ArrayList<String> Lat = new ArrayList<String>();
+    public static ArrayList<String> Lng = new ArrayList<String>();
+    public static ArrayList<String> userName = new ArrayList<String>();
     
-    public Locations(String Lat, String Lng){
+    public Locations(){
+    }
+    
+    public Locations(String username,String userLat, String userLng){
         
-        LatA.add(Lat);
-        LngA.add(Lng);
+        Lat.add(userLat);
+        Lng.add(userLng);
+        userName.add(username);
        
     }
     

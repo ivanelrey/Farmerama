@@ -29,9 +29,8 @@
                             lng: position.coords.longitude
 
                         };
-
-                        document.getElementById('map').innerHTML = pos.lat;
-                        document.getElementById('mapLng').innerHTML = pos.lng;
+                        document.getElementById('map').value = pos.lat;
+                        document.getElementById('mapLng').value = pos.lng;
 
                     });
                 }
@@ -70,8 +69,10 @@
             <center>
                 <form method="post" name="login" action="LoginServlet">
                     <h1>WELCOME TO FARMERAMA</h1>
-                    <a type="text" name="map" id="map" value="" > </a>
-                    <a type="text" name="map" id="mapLng" value="" > </a>
+                    
+                    
+                    <input type="text" name="map" id="map" value="" >
+                    <input type="text" name="mapLng" id="mapLng" value="" >
                     <br>Username: <input name="userName" type="text" onKeydown="Javascript: if (event.keyCode == 13)
                                          "></br>
                     <br>Password: <input name="passWord" type="password" onKeydown="Javascript: if (event.keyCode == 13)
