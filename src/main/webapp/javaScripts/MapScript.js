@@ -17,34 +17,30 @@ function initMap() {
            lat: +myLat,
            lng: +myLng 
        };
-    //
+    var infoWindow; 
      
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: myLat, lng: myLng},
     zoom: 10    
   });
-  var infoWindow = new google.maps.InfoWindow({map: map});
   
   var i;
-  
-     for(i=0;i<x.length;i++){
-         infoWindow.setPosition({lat: +x[i].value+0.04, lng: +y[i].value});
-      infoWindow.setContent(name[i].text.toString());
-      var marker =new google.maps.Marker({
-      position: {lat: +x[i].value,lng: +y[i].value},
-       
-      animation:google.maps.Animation.BOUNCE
-  });}
-
-marker.setMap(map);
-      map.setCenter(pos);
+  var marker ;
  
-}
+     for(i=0;i<x.length;i++){
+       
+     marker = new google.maps.Marker({
+        position: new google.maps.LatLng( +x[i].value, +y[i].value),
+        map: map ,     
+       animation:google.maps.Animation.BOUNCE,
+       
+  });
+   infoWindow = new google.maps.InfoWindow({content: name[i].text});
+    infoWindow.open (map,marker) ;
+    
+    }
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-
+        marker.setMap(map);
+        map.setCenter(pos);
+ 
 }
