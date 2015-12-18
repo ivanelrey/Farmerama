@@ -27,14 +27,18 @@ function initMap() {
   var i;
   var marker ;
  
-     for(i=0;i<x.length;i++){
-       
+     for(i=0;i<x.length;i++){      
      marker = new google.maps.Marker({
         position: new google.maps.LatLng( +x[i].value, +y[i].value),
-        map: map ,     
+        map: map ,
+        id: i,
        animation:google.maps.Animation.BOUNCE,
        
   });
+   google.maps.event.addListener(marker, 'click', function() {               
+        document.getElementById("otheruser").value=name[this.id].text;
+        document.otherName.submit();
+        });
    infoWindow = new google.maps.InfoWindow({content: name[i].text});
     infoWindow.open (map,marker) ;
     

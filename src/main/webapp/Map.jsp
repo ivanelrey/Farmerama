@@ -56,13 +56,11 @@
                   <option ><%=lngList.get(i) %> </option>
                   <% }  %> 
                </select>
-                   
-                
-                
-              
-    
-    
     <div id="map"></div>
+    <form name="otherName" action="seeOtherServlet" method="POST">
+        <input type="hidden" name="otheruser" value="" id="otheruser"/>
+        <input type="submit" value="" />
+    </form>
     <script src="javaScripts/MapScript.js"></script>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqqs4Hh8_XtuyJg938bdP5UdlTemthpYc&signed_in=true&callback=initMap"
