@@ -6,22 +6,22 @@
 
 
 function initMap() {
-       var myLat = +document.getElementById('myLat').value;
-       var myLng = +document.getElementById('myLng').value;
+       var myLat = parseFloat(document.getElementById('myLat').value);
+       var myLng = parseFloat(document.getElementById('myLng').value);
        
        var x = document.getElementById('listOfLat');
        var y = document.getElementById('listOfLng');
        var name = document.getElementById('listOfNames');
     
        var pos = {
-           lat: +myLat,
-           lng: +myLng 
+           lat: myLat,
+           lng: myLng 
        };
     var infoWindow; 
      
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: myLat, lng: myLng},
-    zoom: 10    
+    center: pos,
+    zoom: 6    
   });
   
   var i;
