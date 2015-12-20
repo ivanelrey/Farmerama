@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.Farmerama.LoginCheckUserToDbTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.103 sec <<< FAILURE!
-testCheckUser(com.mycompany.Farmerama.LoginCheckUserToDbTest)  Time elapsed: 0.016 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.096 sec <<< FAILURE!
+testCheckUser(com.mycompany.Farmerama.LoginCheckUserToDbTest)  Time elapsed: 0.015 sec  <<< ERROR!
 java.lang.ClassFormatError: Absent Code attribute in method that is not native or abstract in class file javax/servlet/http/HttpServlet
 	at java.lang.ClassLoader.defineClass1(Native Method)
 	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
