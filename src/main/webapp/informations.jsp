@@ -23,12 +23,7 @@
         <a href="login.jsp" class="header" STYLE="text-decoration: none">LOGIN</a>
         <a href="signUp.jsp" class="header" STYLE="text-decoration: none">CREATE ACCOUNT</a>
         
-        <div class="styled-select">
-        <select style="position: absolute; top: 10px; right: 10px;">
-            <option selected value="Greek">Greek</option>
-            <option value="English">English</option>
-        </select>
-        </div>
+       
         
         <center>
             <p class="inform">
@@ -62,6 +57,12 @@
                 <font size="4">Η ιστοσελίδα είναι υπό κατασκευή και θα είναι έτοιμη σε 2 μήνες!</font>
             </i>
         </b>
+        
+    <div id="google_translate_element"></div><script type="text/javascript">
+      function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'el', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+      }
+    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
         
     </body>

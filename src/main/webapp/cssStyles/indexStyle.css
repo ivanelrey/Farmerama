@@ -89,3 +89,8 @@ body {
     height: 250px;
     width: 450px;
 }
+#fb{
+    position:fixed;
+    right:5px;
+    bottom: 33px;
+}

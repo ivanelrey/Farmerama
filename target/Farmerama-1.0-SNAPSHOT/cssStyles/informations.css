@@ -45,3 +45,9 @@ and open the template in the editor.
    background: url(new_arrow.png) no-repeat right white;
    border: 2px #000040;
    }
+   #google_translate_element{
+       position:fixed;
+       right:15px;
+       top:15px;
+       
+   }

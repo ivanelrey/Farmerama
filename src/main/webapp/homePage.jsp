@@ -48,7 +48,7 @@
             <input class="myButton" type="submit" value="Messages" name="settings" onclick="window.location = 'messagesPage.jsp';" >
         </div>
         
-        <div class="bottom" style="left: 540px">
+        <div class="bottom" style="left: 800px">
         <input class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
         </div>
         

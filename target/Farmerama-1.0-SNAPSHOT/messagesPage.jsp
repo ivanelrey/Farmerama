@@ -20,22 +20,22 @@
     </head>
     <body>
         <div style="position: fixed;">
-            <h1>messages</h1>
+            <h1>MESSAGES</h1>
 
-
+            <div id="contactstxt"><b>All Contacts</b></div>
             <form action="contactWithOtherServlet" method="POST">
                 <%  getAllAccounts accounts = new getAllAccounts();
                   ArrayList<String> users = accounts.getAccounts();
                   if (users != null) {  %>
-                NAME:<input type="text" name="myname" value=${sessionScope.name} />
+                  <div id="welcometxt"><pre>    Welcome <input id="thisname" type="text" name="myname" value=${sessionScope.name} /> </pre><br>Choose someone and start chatting </div>
                 <br>
-                <select name="otheruser"  size="5">
+                <select id="otherUsers" name="otheruser"  size="5">
                     <%for (int i = 0; i < users.size(); i++) {%>
                     <option ><%=users.get(i)%> </option>
                     <% }
                     } %> 
                 </select>
-                <input type="submit"  value="contact" /> 
+                <input id="contactbtn" type="submit"  value="contact" /> 
             </form>
 
 
@@ -64,8 +64,8 @@
                     <form action="messagesServlet" method="POST">
                     <input type="hidden" name="collectionName" value=${sessionScope.collectionName} />
                     <input type="hidden" name="myName" value=${sessionScope.name} />
-                    <input type="text" name="message" value="" />
-                    <input type="submit" value="send" />
+                    <input id="msgbox" type="text" name="message" value="" />
+                    <input id="sendbtn" type="submit" value="send" />
                     </form>
             
         </div>

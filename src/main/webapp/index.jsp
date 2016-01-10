@@ -78,6 +78,6 @@
             <a href="https://www.facebook.com/giannhs.gomarteli">Ivane</a>
             <a href="">Grigoris</a>
         </div>
-        <br><div class="fb-like" data-href="http://89.210.199.4:9090/Farmerama/index.jsp" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>   
+         <br><div id="fb" class="fb-like" data-href="http://89.210.199.4:9090/Farmerama/index.jsp" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>   
     </body>
 </html>

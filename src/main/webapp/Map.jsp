@@ -41,17 +41,17 @@
         ArrayList<String> userNameList = userName;
                    %>
                    
-               <select  id="listOfNames" size="2">
+               <select style="display:none;" id="listOfNames" size="2">
                    <%for (int i = 0 ; i <userNameList.size(); i++) {%>
                   <option ><%=userNameList.get(i) %> </option>
                   <% }  %> 
                </select>
-               <select  id="listOfLat" size="2">
+               <select  style="display:none;" id="listOfLat" size="2">
                    <%for (int i = 0 ; i <latList.size(); i++) {%>
                   <option ><%=latList.get(i) %> </option>
                   <% }  %> 
                </select>
-               <select  id="listOfLng" size="2">
+               <select style="display:none;" id="listOfLng" size="2">
                    <%for (int i = 0 ; i <lngList.size(); i++) {%>
                   <option ><%=lngList.get(i) %> </option>
                   <% }  %> 
