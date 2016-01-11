@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 Ιαν 2016, 11:13:04 μμ
+    Author     : Gomesito
+*/
+h1{
+    position: fixed;
+    left:43%;
+}
+#banana{
+    position: fixed;
+    top:30%;
+    left:10%;
+    width: 200px;
+    height: 200px;
+}
+#bow{
+    position: fixed;
+    top:30%;
+    left:30%;
+    width: 200px;
+    height: 200px;
+}
+#bubble{
+    position: fixed;
+    top:30%;
+    left:50%;
+    width: 200px;
+    height: 200px;
+}
+#zombie{
+    position: fixed;
+    top:30%;
+    left:70%;
+    width: 200px;
+    height: 200px;
+}

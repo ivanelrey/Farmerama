@@ -87,7 +87,9 @@
         </div>
         <div id="information" >
             Name: ${sessionScope.name}<br><br> 
-            <input style="margin-left:100%; height:150px; width:300px" class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
+            <input style="margin-left:100%; height:150px; width:200px" class="myButton" type="submit" value="Chat" name="chat" onclick="window.location = 'chatPage.jsp';" >
+            <input style="margin-left:100%; height:350px; width:200px" class="myButton" type="submit" value="Games"  onclick="window.location = 'gamesPage.jsp';" >
+        
         </div>
             
             <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
