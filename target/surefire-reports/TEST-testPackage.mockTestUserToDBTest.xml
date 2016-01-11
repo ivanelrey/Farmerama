@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="testPackage.mockQuickSnapTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="testPackage.mockTestUserToDBTest" time="0.064" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\bin"/>
@@ -14,6 +14,7 @@
     <property name="user.country" value="GR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="testPackage.mockTestUserToDBTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Nena\Documents\GitHub\Farmerama"/>
     <property name="java.runtime.version" value="1.8.0_40-b25"/>
@@ -44,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_40\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.0.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=testPackage.mockTestUserToDBTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.0.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="el"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,10 +62,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="testPackage.mockQuickSnapTest" name="testgetCnt" time="0"/>
-  <testcase classname="testPackage.mockQuickSnapTest" name="testgetCnt2" time="0"/>
-  <testcase classname="testPackage.mockQuickSnapTest" name="testgetCnt3" time="0"/>
-  <testcase classname="testPackage.mockQuickSnapTest" name="testgetCnt4" time="0"/>
-  <testcase classname="testPackage.mockQuickSnapTest" name="testgetCnt1" time="0"/>
-  <testcase classname="testPackage.mockQuickSnapTest" name="testgetCnt5" time="0"/>
+  <testcase classname="testPackage.mockTestUserToDBTest" name="testCheckUser2" time="0.003"/>
+  <testcase classname="testPackage.mockTestUserToDBTest" name="testCheckUser4" time="0"/>
+  <testcase classname="testPackage.mockTestUserToDBTest" name="testCheckUser1" time="0"/>
+  <testcase classname="testPackage.mockTestUserToDBTest" name="testCheckUser3" time="0"/>
+  <testcase classname="testPackage.mockTestUserToDBTest" name="testCheckUser" time="0"/>
 </testsuite>
