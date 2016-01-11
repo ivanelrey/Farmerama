@@ -16,29 +16,27 @@
         <title>Welcome to Farmerama</title>
     </head>
     <body>
-        
-        
-        <div class="fixed"><input type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" /> 
-        <input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
+
+
+        <div class="fixed"><input id="opalb" type="button" class="myButton" value="Album" name="Album"  onclick="window.location = 'photoAlbum.jsp';" /> 
+            <input class="myButton" type="submit" value="Log Out" name="btnSignOut" onclick="window.location = 'index.jsp';" /></div>
         <div id="profileImg"> <img id="profileImageStyle" align="top" alt="Profile Photo" src=${sessionScope.otherUserProfileImage} >
         </div>
         <div id="information">
             NAME: ${sessionScope.otherUser}
-            <br>AGE: 
-            <br>COUNTRY:
-            <br>CITY:
-        </div>
             
-             <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
+        </div>
 
-               <script> setTimeout('window.location.reload();', 8000); </script>
-               <% a=""; %>
-               
-                    <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
-        
-        
-        <input class="myButton" type="submit" value="Home Page" onclick="window.location='homePage.jsp';" />
-        
+        <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
+
+        <script> setTimeout('window.location.reload();', 8000);</script>
+        <% a = "";%>
+
+        <div style="margin-left: 800px; bottom: 1000px;">  <img src="<%=a%>"/></div>
+
+
+        <input id="ophp" class="myButton" type="submit" value="Home Page" onclick="window.location = 'homePage.jsp';" />
+
         <div id="nav">
         </div>
     </body>

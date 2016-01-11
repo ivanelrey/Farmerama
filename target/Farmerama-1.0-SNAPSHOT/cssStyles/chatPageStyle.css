@@ -9,20 +9,23 @@ and open the template in the editor.
 */
 body{
     background-image: url("../images/palette.jpg");
-    font: 13px "arial";
+    font: 16px "arial";
 }
 
 textarea,
 input {
-    font: 13px "arial";
+    font: 16px "arial";
 }
 .chat{
-    max-width: 300px;
+    width: 600px;
+    position:absolute;
+    left:30%;
 }
 .chat-messages,
 .chat textarea,
 .chat-name {
-    border:2px solid #bbb;
+    border:7px solid #bbb;
+    
 
 }
 .chat-messages {
@@ -30,6 +33,7 @@ input {
     height: 300px;
     overflow-y: scroll;
     padding: 10px;
+    
 }
 .chat-message {
     margin-bottom: 10px;
@@ -39,6 +43,7 @@ input {
     padding: 10px;
     border-bottom: 0;
     margin: 0;
+    text-align: center;
 }
 .chat textarea {
     width: 100%;

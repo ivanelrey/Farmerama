@@ -37,7 +37,7 @@ textArea{
     height:70%;
     font-size: 20px;
     padding: 5px;
-    background-color: green;
+    background: transparent;
     border: 3;
     border-color: black;
 }
@@ -49,6 +49,7 @@ textArea{
 }
 h1{
     position:fixed;
+    top:20px;
     left:43%;
 }
 #contactbtn{
@@ -119,6 +120,7 @@ h1{
     border: 0;
     font-size: 25px;
     background-color: green;
+    background: transparent;
 }
 #welcometxt{
     position:fixed;
