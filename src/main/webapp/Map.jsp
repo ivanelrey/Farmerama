@@ -63,7 +63,7 @@
     </form>
     <script src="javaScripts/MapScript.js"></script>
     
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqqs4Hh8_XtuyJg938bdP5UdlTemthpYc&signed_in=true&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXdwHwFVVkErBUPjlK1K-qd_jrGxsdniQ&signed_in=true&callback=initMap"
         async defer>
     </script>
   </body>
