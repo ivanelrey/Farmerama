@@ -210,3 +210,25 @@ div.fixed {
     font-family: verdana;
     -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 }
+#chatbtn{
+    position:fixed;
+    left:85%;
+    top:15%;
+    width: 150px;
+}
+#gamebtn{
+    position:fixed;
+    left:85%;
+    top:28%;
+    width: 150px;
+}
+#ophp{
+    position:fixed;
+    left:15px;
+    bottom: 15px;
+}
+#opalb{
+    position:fixed;
+    left:87%;
+    top:16%;
+}

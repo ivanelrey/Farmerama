@@ -38,7 +38,7 @@
             <form method="post" action="photoServlet">
                <p>
                 <a id="download" onClick="downloadCanvas(this, 'canvas', 'Snap.png')" class="upButton upButton-primary upButtonH-primary">Download Photo</a> 
-                <input type="text" id="skata" name="name" /> 
+                <input type="hidden" id="skata" name="name" /> 
                 <input type="hidden" name="userName" value=${sessionScope.name} >
                 <a id="upload"  onClick="uploadCanvas('canvas')" class="upButton upButton-primary upButtonH-primary" >Upload to Album</a>
                 <input type="submit" value="Confirm" class="upButton upButton-primary upButtonH-primary"/>
@@ -47,7 +47,7 @@
             </form>
                 <form method="post" action="secondsServlet">
             
-                <input type="text" id="skata8" name="urlImg" /> 
+                <input type="hidden" id="skata8" name="urlImg" /> 
                 <input type="hidden" name="userName" value=${sessionScope.name} >
                 <a id="upload"  onClick="uploadCanvasSec('canvas')"  class="upButton upButton-primary upButtonH-primary" >Snap Photo for 8 seconds</a>
                 <input type="submit" value="Go"  class="upButton upButton-primary upButtonH-primary"/>
