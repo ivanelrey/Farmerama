@@ -37,10 +37,71 @@ public class mockQuickSnapTest {
     public void tearDown() {
     }
 
+    
     @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testgetCnt() {
+        System.out.println("getCnt");
+        double a = 1;
+        double b = 2;
+        mockQuickSnap instance = new mockQuickSnap();
+        double expResult = 3;
+        double result = instance.getCnt(a, b);
+        assertEquals(expResult, result,0.0001);   
+    }
+    
+    @Test
+    public void testgetCnt1() {
+        System.out.println("getCnt");
+        double a = 23;
+        double b = 23;
+        mockQuickSnap instance = new mockQuickSnap();
+        double expResult = 46;
+        double result = instance.getCnt1(a, b);
+        assertEquals(expResult, result,0.0001);   
+    }
+    
+    @Test
+    public void testgetCnt2() {
+        System.out.println("getCnt");
+        double a = 4;
+        double b = 4;
+        mockQuickSnap instance = new mockQuickSnap();
+        double expResult = 8;
+        double result = instance.getCnt2(a, b);
+        assertEquals(expResult, result,0.0001);   
+    }
+    
+    @Test
+    public void testgetCnt3() {
+        System.out.println("getCnt");
+        double a = -1;
+        double b = -2;
+        mockQuickSnap instance = new mockQuickSnap();
+        double expResult = -3;
+        double result = instance.getCnt3(a, b);
+        assertEquals(expResult, result,0.0001);   
+    }
+    
+    @Test
+    public void testgetCnt4() {
+        System.out.println("getCnt");
+        double a = 1;
+        double b = 2;
+        mockQuickSnap instance = new mockQuickSnap();
+        double expResult = 3;
+        double result = instance.getCnt4(a, b);
+        assertEquals(expResult, result,0.0001);   
+    }
+    
+    @Test
+    public void testgetCnt5() {
+        System.out.println("getCnt");
+        double a = 1;
+        double b = 2;
+        mockQuickSnap instance = new mockQuickSnap();
+        double expResult = 3;
+        double result = instance.getCnt4(a, b);
+        assertEquals(expResult, result,0.0001);   
     }
     
 }

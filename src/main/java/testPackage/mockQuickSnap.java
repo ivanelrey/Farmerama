@@ -10,6 +10,44 @@ package testPackage;
  * @author Tolis MacNamli
  */
 public class mockQuickSnap {
+
+    
+
+    double getCnt(double a, double b) {
+        double cnt;
+        cnt = a + b;
+        return cnt;
+    }
+    
+    double getCnt1(double a, double b) {
+        double cnt;
+        cnt = a + b;
+        return cnt;
+    }
+    
+    double getCnt2(double a, double b) {
+        double cnt;
+        cnt = a + b;
+        return cnt;
+    }
+    
+    double getCnt3(double a, double b) {
+        double cnt;
+        cnt = a + b;
+        return cnt;
+    }
+    
+    double getCnt4(double a, double b) {
+        double cnt;
+        cnt = a + b;
+        return cnt;
+    }
+    
+    double getCnt5(double a, double b) {
+        double cnt;
+        cnt = a + b;
+        return cnt;
+    }
     
     public class quickSnap {
     
@@ -27,9 +65,17 @@ public class mockQuickSnap {
     
     public String imageOut(){
         
+        boolean exists = true;
+        String error = "error";
+        
+        if(exists){
+        
         return image;
+        }else{
+            return error;
+        }
         
     }
-
+    
     }
 }
