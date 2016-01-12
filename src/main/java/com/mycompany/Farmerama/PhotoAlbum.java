@@ -65,6 +65,14 @@ public class PhotoAlbum implements PhotoAlbumInterface {
         }
         return photos;
     }
-
-
+    public String getPhotoForProfile(String name,int x) {
+        BasicDBObject searchQuery = new BasicDBObject();
+        searchQuery.put("userName", name);
+        DBCursor cursor = photo.find(searchQuery);
+        String photo = null ; //cursor.next().get("photoURL").toString();
+         for(int i=0; i<x+1; i++){
+         photo = cursor.next().get("photoURL").toString();    
+        }
+        return photo;
+    }
 }
