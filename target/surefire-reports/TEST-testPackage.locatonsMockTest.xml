@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.085" errors="0" skipped="0" tests="15" name="testPackage.locatonsMockTest">
+<testsuite failures="0" time="0.087" errors="0" skipped="0" tests="15" name="testPackage.locatonsMockTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin"/>
@@ -61,19 +61,19 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.006" classname="testPackage.locatonsMockTest" name="testGetLocZeroLat2"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLng2"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigLngBigLat2"/>
+  <testcase time="0.005" classname="testPackage.locatonsMockTest" name="testGetLocZeroLat"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocZeroLat2"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocZeroLatLng"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLat"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocSmallLat"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocNegLat"/>
+  <testcase time="0.001" classname="testPackage.locatonsMockTest" name="testGetLocNegLat1"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLa2t"/>
+  <testcase time="0.001" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLng2"/>
   <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLngBigLat"/>
   <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLng"/>
   <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocSmallLat1"/>
   <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocZeroLat1"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLa2t"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocNegLat"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigNegLat"/>
   <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigLat"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocSmallLat"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocZeroLatLng"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocNegLat1"/>
-  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocZeroLat"/>
+  <testcase time="0" classname="testPackage.locatonsMockTest" name="testGetLocBigLngBigLat2"/>
 </testsuite>
