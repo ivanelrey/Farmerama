@@ -141,6 +141,12 @@ div.fixed {
     -moz-user-select: none;
     
 }
+#Showname{
+    position:fixed;
+    left:8%;
+    top:13.5%;
+    
+}
 
 .myButton {
 	background-color:#000040;
@@ -231,4 +237,46 @@ div.fixed {
     position:fixed;
     left:87%;
     top:16%;
+}
+#box{
+    position:fixed;
+    left:28%;
+    top:12%;
+    width: 700px;
+    height: 68%;
+    padding: 5px;
+    border: 15px solid navy;
+    margin: 25px;
+        
+}
+#chart{
+    display:none;
+    width: 100%;
+    height: 100%;
+}
+#chartbtn{
+    position:fixed;
+    left:70.25%;
+    top:12%;
+}
+#farmnewsbtn{
+    position:fixed;
+    left:64.25%;
+    top:12%;
+}
+#snapbtn{
+    position:fixed;
+    left:58.55%;
+    top:12%;
+}
+#randompeople{
+    display:none;
+    width: 100%;
+    height: 100%;
+    
+}
+#findfriendbtn{
+    position:fixed;
+    left:52.35%;
+    top:12%;
 }

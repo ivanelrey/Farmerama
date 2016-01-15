@@ -74,4 +74,12 @@ public class getAllAccounts {
         }
         return allFoundUsersByNumber;
     }
+     public ArrayList<String> getAccountsPhotos() {
+        DBCursor cursor = account.find();
+        ArrayList<String> photos = new ArrayList<String>();
+        while (cursor.hasNext()) {
+            photos.add(cursor.next().get("profileImage").toString());
+        }
+        return photos;
+    }
 }
