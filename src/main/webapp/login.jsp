@@ -71,8 +71,8 @@
                     <h1>WELCOME TO FARMERAMA</h1>
                     
                     
-                    <input type="hidden" name="map" id="map" value="41.07523555732879" >
-                    <input type="hidden" name="mapLng" id="mapLng" value="23.55550240840921" >
+                    <input type="hidden" name="map" id="map" value="" >
+                    <input type="hidden" name="mapLng" id="mapLng" value="" >
                     <br>Username: <input name="userName" type="text" onKeydown="Javascript: if (event.keyCode == 13)
                                          "></br>
                     <br>Password: <input name="passWord" type="password" onKeydown="Javascript: if (event.keyCode == 13)
