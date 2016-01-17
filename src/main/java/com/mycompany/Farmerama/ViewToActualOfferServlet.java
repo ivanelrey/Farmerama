@@ -18,9 +18,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ntinos
  */
-@WebServlet(name = "CreateOfferPage", urlPatterns = {"/CreateOfferPage"})
-public class CreateOfferPageServlet extends HttpServlet {
+@WebServlet(name = "ViewToActualOfferServlet", urlPatterns = {"/ViewToActualOfferServlet"})
+public class ViewToActualOfferServlet extends HttpServlet {
+    private int indexInt;
+    private String titleStr, authorStr, descrStr;
+    private String actionStr;
     private String address;
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,6 +38,7 @@ public class CreateOfferPageServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         PrintWriter out = response.getWriter();
         
     }
@@ -50,6 +55,7 @@ public class CreateOfferPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         processRequest(request, response);
     }
 
@@ -65,27 +71,21 @@ public class CreateOfferPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
-        CreateOfferPage offer = new CreateOfferPage();
+        Object title = request.getParameter("title");
+        Object author = request.getParameter("author");
+        Object descr = request.getParameter("descr");
+        titleStr = title.toString();
+        authorStr = author.toString();
+        descrStr = descr.toString();
         
-        if(request.getParameter("action").equals("Sell"))
-        {
-            offer.setSellDoc(request.getParameter("author"),
-                request.getParameter("title"),
-                request.getParameter("descr"),
-                request.getParameter("action"),
-                request.getParameter("section"));
-            address = "homePage.jsp";
-        }
-        else if(request.getParameter("action").equals("Buy"))
-        {
-            offer.setBuyDoc(request.getParameter("author"),
-                request.getParameter("title"),
-                request.getParameter("descr"),
-                request.getParameter("action"),
-                request.getParameter("section"));
-            address = "homePage.jsp";
-        }
-        
+        //indexInt = Integer.parseInt(indexStr);
+        Object action = request.getParameter("action");
+        actionStr = action.toString();
+        request.setAttribute("title", titleStr);
+        request.setAttribute("action", actionStr);
+        request.setAttribute("author", authorStr);
+        request.setAttribute("descr", descrStr);
+        address = "ActualOffer.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);
         processRequest(request, response);

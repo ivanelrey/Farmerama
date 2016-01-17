@@ -80,6 +80,12 @@ public class OfferPageServlet extends HttpServlet {
             request.setAttribute("action", attr);
             address = "ViewOffers.jsp";
         }
+        else if(request.getParameter("action").equals("All"))
+        {
+            attr = "All";
+            request.setAttribute("action", attr);
+            address = "ViewOffers.jsp";
+        }
         
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);

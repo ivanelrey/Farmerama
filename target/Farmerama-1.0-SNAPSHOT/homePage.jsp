@@ -51,6 +51,10 @@
         <div class="bottom" style="left: 800px">
             <input class="myButton" type="submit" value="See Users on Map" name="map" onclick="window.location = 'Map.jsp';" >
         </div>
+        
+         <div class="bottom" style="left: 1050px">
+            <input class="myButton" type="submit" value="View Offers" name="offers" onclick="window.location = 'OfferPage.jsp';" >
+        </div>
 
         <form action="searchServlet" method="POST">
             <input type="text"  STYLE="left: 26%; height: 40px; font-size: 100%; top: 3%;position: fixed;z-index: 7" name="search" placeholder="Search Friends" />
