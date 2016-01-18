@@ -11,8 +11,8 @@ package com.mycompany.Farmerama;
  */
 public interface COfferPageInterface 
 {
-    public void setSellDoc(String title, String descr,
+    public void setSellDoc(String author, String title, String descr,
             String action, String section);
-    public void setBuyDoc(String title, String descr,
+    public void setBuyDoc(String author, String title, String descr,
             String action, String section);
 }
